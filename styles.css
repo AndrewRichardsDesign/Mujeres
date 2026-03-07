@@ -203,16 +203,74 @@ body {
 }
 
 .photo-card {
-    background: #ffffff;
+    perspective: 1000px;
+    background: transparent;
     border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
 }
 
-.photo-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+.card-inner {
+    position: relative;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.photo-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card-front {
+    position: relative;
+}
+
+.card-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    text-align: center;
+}
+
+.testimony-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 24px;
+}
+
+.testimony-btn {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #5150f7;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    letter-spacing: 0.01em;
+}
+
+.testimony-btn:hover {
+    opacity: 0.7;
+}
+
+.card-back .testimony-btn {
+    margin-bottom: 0;
 }
 
 .photo-square {

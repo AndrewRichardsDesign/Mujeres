@@ -117,4 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const secs = Math.floor(seconds % 60);
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     }
+
+    // ============================================
+    // Card Flip
+    // ============================================
+    document.querySelectorAll('.flip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.photo-card');
+            card.classList.toggle('flipped');
+        });
+    });
 });
