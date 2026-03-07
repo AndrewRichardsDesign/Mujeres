@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Mujeres</h1>
+            <p class="hero-subtitle">Celebrating strength, resilience, and the power of women everywhere.</p>
+            <a href="#content" class="hero-cta">Explore</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">
+                <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="300" rx="16" fill="rgba(255,255,255,0.1)"/>
+                    <circle cx="200" cy="120" r="50" fill="rgba(255,255,255,0.15)"/>
+                    <path d="M140 260 Q200 180 260 260" fill="rgba(255,255,255,0.12)"/>
+                    <text x="200" y="280" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="14" font-family="Inter">Placeholder Image</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section id="content" class="tabs-section">
+        <div class="container">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="before">Before</button>
+                <button class="tab-btn" data-tab="during">During</button>
+                <button class="tab-btn" data-tab="after">After</button>
+            </div>
+
+            <!-- Before Tab -->
+            <div class="tab-panel active" id="tab-before">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
+                            <path d="M32 40h16M40 32v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Nothing here yet</h3>
+                    <p>Content for the "Before" phase will appear here.</p>
+                </div>
+            </div>
+
+            <!-- During Tab -->
+            <div class="tab-panel" id="tab-during">
+                <div class="photo-grid">
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">1</div>
+                        </div>
+                        <p class="photo-description">A quiet morning before the gathering begins, anticipation filling the air.</p>
+                        <div class="audio-player" data-audio="audio-1">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">2</div>
+                        </div>
+                        <p class="photo-description">Voices unite in song, carrying stories passed through generations.</p>
+                        <div class="audio-player" data-audio="audio-2">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">3</div>
+                        </div>
+                        <p class="photo-description">Hands weaving together, creating something greater than the sum of its parts.</p>
+                        <div class="audio-player" data-audio="audio-3">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">4</div>
+                        </div>
+                        <p class="photo-description">Laughter echoes through the space, bonds strengthening with every moment.</p>
+                        <div class="audio-player" data-audio="audio-4">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">5</div>
+                        </div>
+                        <p class="photo-description">A circle of trust, where every voice is heard and every story matters.</p>
+                        <div class="audio-player" data-audio="audio-5">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">6</div>
+                        </div>
+                        <p class="photo-description">Dancing under open skies, movement becomes the language of freedom.</p>
+                        <div class="audio-player" data-audio="audio-6">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">7</div>
+                        </div>
+                        <p class="photo-description">Shared meals nourish more than the body — they feed the soul.</p>
+                        <div class="audio-player" data-audio="audio-7">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">8</div>
+                        </div>
+                        <p class="photo-description">Colors bloom on canvas, each brushstroke a declaration of identity.</p>
+                        <div class="audio-player" data-audio="audio-8">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">9</div>
+                        </div>
+                        <p class="photo-description">Words spoken aloud carry the weight of truth and the lightness of hope.</p>
+                        <div class="audio-player" data-audio="audio-9">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">10</div>
+                        </div>
+                        <p class="photo-description">Eyes closed, hearts open — meditation brings clarity to the collective spirit.</p>
+                        <div class="audio-player" data-audio="audio-10">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">11</div>
+                        </div>
+                        <p class="photo-description">Children watch and learn, the next generation inheriting courage.</p>
+                        <div class="audio-player" data-audio="audio-11">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">12</div>
+                        </div>
+                        <p class="photo-description">Embraces at sundown — a promise that this is only the beginning.</p>
+                        <div class="audio-player" data-audio="audio-12">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">13</div>
+                        </div>
+                        <p class="photo-description">Hands raised in solidarity, a powerful image of unity and purpose.</p>
+                        <div class="audio-player" data-audio="audio-13">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">14</div>
+                        </div>
+                        <p class="photo-description">Reflections in still water — seeing ourselves clearly for the first time.</p>
+                        <div class="audio-player" data-audio="audio-14">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">15</div>
+                        </div>
+                        <p class="photo-description">Writing letters to future selves, sealing intentions with determination.</p>
+                        <div class="audio-player" data-audio="audio-15">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-square">
+                            <div class="photo-placeholder">16</div>
+                        </div>
+                        <p class="photo-description">The final moment together — gratitude, tears, and the courage to continue.</p>
+                        <div class="audio-player" data-audio="audio-16">
+                            <button class="play-btn" aria-label="Play audio">
+                                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress-track">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- After Tab -->
+            <div class="tab-panel" id="tab-after">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
+                            <path d="M32 40h16M40 32v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Nothing here yet</h3>
+                    <p>Content for the "After" phase will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
