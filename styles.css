@@ -15,8 +15,8 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #e0e0e0;
-    background: #6b6b6b;
+    color: #1a1a2e;
+    background: #ffffff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4a4a4a;
+    background: linear-gradient(135deg, #5150f7 0%, #7b68ee 40%, #9b59b6 100%);
     overflow: hidden;
     padding: 60px 40px;
     text-align: center;
@@ -40,8 +40,9 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.02) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -75,20 +76,20 @@ body {
 
 .hero-cta {
     display: inline-block;
-    padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    padding: 14px 36px;
+    background: #ffffff;
+    color: #5150f7;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: all 0.3s ease;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
 
 .hero-cta:hover {
-    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* ============================================
@@ -120,8 +121,9 @@ body {
    Main Navigation
    ============================================ */
 .main-nav {
-    background: #5a5a5a;
+    background: #5150f7;
     padding: 16px 0;
+    box-shadow: 0 2px 12px rgba(81, 80, 247, 0.2);
 }
 
 .nav-inner {
@@ -137,15 +139,19 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 17px;
-    font-weight: 400;
-    opacity: 0.85;
+    font-weight: 500;
+    opacity: 0.8;
     transition: opacity 0.2s ease;
     padding: 4px 0;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    opacity: 1;
+}
+
 .nav-link.active {
     opacity: 1;
+    border-bottom: 2px solid #ffffff;
 }
 
 /* ============================================
@@ -153,6 +159,7 @@ body {
    ============================================ */
 .page-content {
     min-height: 80vh;
+    background: #fafafa;
 }
 
 .content-section {
@@ -179,7 +186,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 28px;
     font-weight: 700;
-    color: #ffffff;
+    color: #1a1a2e;
     margin-bottom: 24px;
     text-align: center;
 }
@@ -187,7 +194,7 @@ body {
 .section-body {
     font-size: 17px;
     line-height: 1.8;
-    color: #d0d0d0;
+    color: #4b5563;
     margin-bottom: 32px;
 }
 
@@ -200,14 +207,14 @@ body {
 
 .contact-intro {
     font-size: 17px;
-    color: #b0b0b0;
+    color: #6b7280;
     margin-bottom: 16px;
 }
 
 .contact-item {
     font-size: 22px;
     font-weight: 500;
-    color: #ffffff;
+    color: #5150f7;
     margin-bottom: 12px;
 }
 
@@ -216,7 +223,7 @@ body {
    ============================================ */
 .tabs-section {
     padding: 80px 0 120px;
-    background: #6b6b6b;
+    background: #fafafa;
 }
 
 .container {
@@ -230,14 +237,14 @@ body {
     justify-content: center;
     gap: 8px;
     margin-bottom: 48px;
-    background: #5a5a5a;
+    background: #ffffff;
     border-radius: 16px;
     padding: 6px;
     display: inline-flex;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .tab-btn {
@@ -247,7 +254,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: #b0b0b0;
+    color: #6b7280;
     cursor: pointer;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -255,8 +262,8 @@ body {
 }
 
 .tab-btn:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
+    color: #1a1a2e;
+    background: #f3f4f6;
 }
 
 .tab-btn.active {
@@ -290,20 +297,20 @@ body {
     width: 80px;
     height: 80px;
     margin: 0 auto 24px;
-    color: #777;
+    color: #d1d5db;
 }
 
 .empty-state h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 24px;
     font-weight: 600;
-    color: #b0b0b0;
+    color: #6b7280;
     margin-bottom: 8px;
 }
 
 .empty-state p {
     font-size: 15px;
-    color: #999;
+    color: #9ca3af;
 }
 
 /* ============================================
@@ -336,8 +343,8 @@ body {
     backface-visibility: hidden;
     border-radius: 16px;
     overflow: hidden;
-    background: #5a5a5a;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .card-front {
@@ -359,7 +366,7 @@ body {
 .testimony-text {
     font-size: 15px;
     line-height: 1.8;
-    color: #d0d0d0;
+    color: #4b5563;
     margin-bottom: 24px;
 }
 
@@ -369,7 +376,7 @@ body {
     padding: 0;
     border: none;
     background: none;
-    color: #8b8aff;
+    color: #5150f7;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -388,7 +395,7 @@ body {
 
 .photo-square {
     aspect-ratio: 1;
-    background: linear-gradient(135deg, #555 0%, #666 100%);
+    background: linear-gradient(135deg, #e8e7ff 0%, #f0edff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,14 +405,14 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 48px;
     font-weight: 700;
-    color: #999;
-    opacity: 0.4;
+    color: #5150f7;
+    opacity: 0.25;
 }
 
 .photo-description {
     padding: 20px 20px 12px;
     font-size: 14px;
-    color: #c0c0c0;
+    color: #4b5563;
     line-height: 1.6;
 }
 
@@ -470,7 +477,7 @@ body {
 .progress-track {
     flex: 1;
     height: 4px;
-    background: #777;
+    background: #e5e7eb;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
@@ -494,7 +501,7 @@ body {
 
 .time-display {
     font-size: 12px;
-    color: #999;
+    color: #9ca3af;
     font-variant-numeric: tabular-nums;
     min-width: 36px;
     text-align: right;
