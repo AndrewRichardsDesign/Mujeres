@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The March - Voces del 8M</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <a href="index.html#participate" class="nav-link">Participate</a>
+            <a href="index.html#collaborators" class="nav-link">Collaborators</a>
+            <a href="march.html" class="nav-link active">The March</a>
+            <a href="index.html#sheets" class="nav-link">Sheets</a>
+            <a href="index.html#activists" class="nav-link">Activists</a>
+        </div>
+    </nav>
+
+    <!-- Tabs Section -->
+    <section class="tabs-section">
+        <div class="container">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="before">Before</button>
+                <button class="tab-btn" data-tab="during">During</button>
+                <button class="tab-btn" data-tab="after">After</button>
+            </div>
+
+            <!-- Before Tab -->
+            <div class="tab-panel active" id="tab-before">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
+                            <path d="M32 40h16M40 32v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Nothing here yet</h3>
+                    <p>Content for the "Before" phase will appear here.</p>
+                </div>
+            </div>
+
+            <!-- During Tab -->
+            <div class="tab-panel" id="tab-during">
+                <div class="photo-grid">
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">1</div></div>
+                                <p class="photo-description">A quiet morning before the gathering begins, anticipation filling the air.</p>
+                                <div class="audio-player" data-audio="audio-1">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">2</div></div>
+                                <p class="photo-description">Voices unite in song, carrying stories passed through generations.</p>
+                                <div class="audio-player" data-audio="audio-2">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla porttitor accumsan tincidunt.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">3</div></div>
+                                <p class="photo-description">Hands weaving together, creating something greater than the sum of its parts.</p>
+                                <div class="audio-player" data-audio="audio-3">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">4</div></div>
+                                <p class="photo-description">Laughter echoes through the space, bonds strengthening with every moment.</p>
+                                <div class="audio-player" data-audio="audio-4">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">5</div></div>
+                                <p class="photo-description">A circle of trust, where every voice is heard and every story matters.</p>
+                                <div class="audio-player" data-audio="audio-5">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">6</div></div>
+                                <p class="photo-description">Dancing under open skies, movement becomes the language of freedom.</p>
+                                <div class="audio-player" data-audio="audio-6">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">7</div></div>
+                                <p class="photo-description">Shared meals nourish more than the body — they feed the soul.</p>
+                                <div class="audio-player" data-audio="audio-7">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">8</div></div>
+                                <p class="photo-description">Colors bloom on canvas, each brushstroke a declaration of identity.</p>
+                                <div class="audio-player" data-audio="audio-8">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">9</div></div>
+                                <p class="photo-description">Words spoken aloud carry the weight of truth and the lightness of hope.</p>
+                                <div class="audio-player" data-audio="audio-9">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">10</div></div>
+                                <p class="photo-description">Eyes closed, hearts open — meditation brings clarity to the collective spirit.</p>
+                                <div class="audio-player" data-audio="audio-10">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Donec sollicitudin molestie malesuada.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">11</div></div>
+                                <p class="photo-description">Children watch and learn, the next generation inheriting courage.</p>
+                                <div class="audio-player" data-audio="audio-11">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">12</div></div>
+                                <p class="photo-description">Embraces at sundown — a promise that this is only the beginning.</p>
+                                <div class="audio-player" data-audio="audio-12">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">13</div></div>
+                                <p class="photo-description">Hands raised in solidarity, a powerful image of unity and purpose.</p>
+                                <div class="audio-player" data-audio="audio-13">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">14</div></div>
+                                <p class="photo-description">Reflections in still water — seeing ourselves clearly for the first time.</p>
+                                <div class="audio-player" data-audio="audio-14">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">15</div></div>
+                                <p class="photo-description">Writing letters to future selves, sealing intentions with determination.</p>
+                                <div class="audio-player" data-audio="audio-15">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="photo-square"><div class="photo-placeholder">16</div></div>
+                                <p class="photo-description">The final moment together — gratitude, tears, and the courage to continue.</p>
+                                <div class="audio-player" data-audio="audio-16">
+                                    <button class="play-btn" aria-label="Play audio">
+                                        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+                                    </button>
+                                    <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
+                                </div>
+                                <button class="testimony-btn flip-btn">Read testimony</button>
+                            </div>
+                            <div class="card-back">
+                                <p class="testimony-text">Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                                <button class="testimony-btn flip-btn">Back to photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- After Tab -->
+            <div class="tab-panel" id="tab-after">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
+                            <path d="M32 40h16M40 32v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Nothing here yet</h3>
+                    <p>Content for the "After" phase will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

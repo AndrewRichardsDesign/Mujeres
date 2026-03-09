@@ -1,7 +1,32 @@
-// ============================================
-// Tab Navigation
-// ============================================
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ============================================
+    // Section Navigation (index.html)
+    // ============================================
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const sections = document.querySelectorAll('.content-section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (!targetSection) return;
+
+            e.preventDefault();
+
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+
+            // Update active section
+            sections.forEach(s => s.classList.remove('active'));
+            targetSection.classList.add('active');
+        });
+    });
+
+    // ============================================
+    // Tab Navigation (march.html)
+    // ============================================
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -9,15 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const target = btn.dataset.tab;
 
-            // Update active button
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // Update active panel
             tabPanels.forEach(panel => panel.classList.remove('active'));
             document.getElementById(`tab-${target}`).classList.add('active');
 
-            // Stop all audio when switching tabs
             stopAllAudio();
         });
     });
@@ -29,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentlyPlaying = null;
     const audioInstances = new Map();
 
-    // Simulated audio duration (seconds) for demo
     const DEMO_DURATION = 30;
 
     players.forEach(player => {
@@ -39,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeDisplay = player.querySelector('.time-display');
         const audioId = player.dataset.audio;
 
-        // Each player gets its own state
         const state = {
             playing: false,
             progress: 0,
@@ -51,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (state.playing) {
                 pauseAudio(audioId);
             } else {
-                // Stop any other playing audio first
                 if (currentlyPlaying && currentlyPlaying !== audioId) {
                     pauseAudio(currentlyPlaying);
                 }
@@ -59,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Click on progress bar to seek
         progressTrack.addEventListener('click', (e) => {
             const rect = progressTrack.getBoundingClientRect();
             const clickX = e.clientX - rect.left;
@@ -79,9 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         playBtn.classList.add('playing');
         currentlyPlaying = audioId;
 
-        // Simulate playback progress
         state.interval = setInterval(() => {
-            state.progress += (100 / DEMO_DURATION) * 0.1; // Update every 100ms
+            state.progress += (100 / DEMO_DURATION) * 0.1;
             if (state.progress >= 100) {
                 state.progress = 0;
                 pauseAudio(audioId);

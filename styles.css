@@ -15,8 +15,8 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #1a1a2e;
-    background: #ffffff;
+    color: #e0e0e0;
+    background: #6b6b6b;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -26,11 +26,11 @@ body {
    ============================================ */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #5150f7 0%, #7b68ee 40%, #9b59b6 100%);
+    background: #4a4a4a;
     overflow: hidden;
     padding: 60px 40px;
     text-align: center;
@@ -40,9 +40,8 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 70%);
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.02) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -56,19 +55,19 @@ body {
 
 .hero-content h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(48px, 8vw, 96px);
+    font-size: clamp(36px, 6vw, 64px);
     font-weight: 700;
-    line-height: 1.05;
+    line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .hero-subtitle {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(16px, 2vw, 18px);
     font-weight: 400;
     opacity: 0.85;
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     max-width: 440px;
     margin-left: auto;
     margin-right: auto;
@@ -76,29 +75,148 @@ body {
 
 .hero-cta {
     display: inline-block;
-    padding: 16px 48px;
-    background: #ffffff;
-    color: #5150f7;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
 }
 
 .hero-cta:hover {
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* ============================================
+   Language Switcher
+   ============================================ */
+.lang-switcher {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    z-index: 10;
+    display: flex;
+    gap: 16px;
+}
+
+.lang-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.lang-link:hover {
+    opacity: 1;
+}
 
 /* ============================================
-   Tabs Section
+   Main Navigation
+   ============================================ */
+.main-nav {
+    background: #5a5a5a;
+    padding: 16px 0;
+}
+
+.nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 0 24px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+    padding: 4px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    opacity: 1;
+}
+
+/* ============================================
+   Page Content
+   ============================================ */
+.page-content {
+    min-height: 80vh;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px 120px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.section-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 32px;
+}
+
+/* ============================================
+   Contact Block
+   ============================================ */
+.contact-block {
+    margin-top: 40px;
+}
+
+.contact-intro {
+    font-size: 17px;
+    color: #b0b0b0;
+    margin-bottom: 16px;
+}
+
+.contact-item {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* ============================================
+   Tabs Section (march.html)
    ============================================ */
 .tabs-section {
     padding: 80px 0 120px;
-    background: #fafafa;
+    background: #6b6b6b;
 }
 
 .container {
@@ -112,14 +230,14 @@ body {
     justify-content: center;
     gap: 8px;
     margin-bottom: 48px;
-    background: #ffffff;
+    background: #5a5a5a;
     border-radius: 16px;
     padding: 6px;
     display: inline-flex;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .tab-btn {
@@ -129,7 +247,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: #6b7280;
+    color: #b0b0b0;
     cursor: pointer;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -137,8 +255,8 @@ body {
 }
 
 .tab-btn:hover {
-    color: #1a1a2e;
-    background: #f3f4f6;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .tab-btn.active {
@@ -159,11 +277,6 @@ body {
     display: block;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* ============================================
    Empty State
    ============================================ */
@@ -177,20 +290,20 @@ body {
     width: 80px;
     height: 80px;
     margin: 0 auto 24px;
-    color: #d1d5db;
+    color: #777;
 }
 
 .empty-state h3 {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 24px;
     font-weight: 600;
-    color: #6b7280;
+    color: #b0b0b0;
     margin-bottom: 8px;
 }
 
 .empty-state p {
     font-size: 15px;
-    color: #9ca3af;
+    color: #999;
 }
 
 /* ============================================
@@ -223,8 +336,8 @@ body {
     backface-visibility: hidden;
     border-radius: 16px;
     overflow: hidden;
-    background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    background: #5a5a5a;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-front {
@@ -246,7 +359,7 @@ body {
 .testimony-text {
     font-size: 15px;
     line-height: 1.8;
-    color: #4b5563;
+    color: #d0d0d0;
     margin-bottom: 24px;
 }
 
@@ -256,7 +369,7 @@ body {
     padding: 0;
     border: none;
     background: none;
-    color: #5150f7;
+    color: #8b8aff;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -275,7 +388,7 @@ body {
 
 .photo-square {
     aspect-ratio: 1;
-    background: linear-gradient(135deg, #e8e7ff 0%, #f0edff 100%);
+    background: linear-gradient(135deg, #555 0%, #666 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,14 +398,14 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 48px;
     font-weight: 700;
-    color: #5150f7;
-    opacity: 0.25;
+    color: #999;
+    opacity: 0.4;
 }
 
 .photo-description {
     padding: 20px 20px 12px;
     font-size: 14px;
-    color: #4b5563;
+    color: #c0c0c0;
     line-height: 1.6;
 }
 
@@ -357,7 +470,7 @@ body {
 .progress-track {
     flex: 1;
     height: 4px;
-    background: #e5e7eb;
+    background: #777;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
@@ -381,7 +494,7 @@ body {
 
 .time-display {
     font-size: 12px;
-    color: #9ca3af;
+    color: #999;
     font-variant-numeric: tabular-nums;
     min-width: 36px;
     text-align: right;
@@ -392,7 +505,26 @@ body {
    ============================================ */
 @media (max-width: 768px) {
     .hero {
-        padding: 100px 24px 60px;
+        padding: 80px 24px 60px;
+    }
+
+    .lang-switcher {
+        top: 16px;
+        right: 16px;
+        gap: 12px;
+    }
+
+    .lang-link {
+        font-size: 13px;
+    }
+
+    .nav-inner {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        font-size: 15px;
     }
 
     .photo-grid {
@@ -417,10 +549,18 @@ body {
     .tabs-section {
         padding: 48px 0 80px;
     }
+
+    .content-container {
+        padding: 32px 20px 80px;
+    }
 }
 
 @media (max-width: 480px) {
     .tab-btn {
         padding: 10px 16px;
+    }
+
+    .nav-inner {
+        gap: 16px;
     }
 }
