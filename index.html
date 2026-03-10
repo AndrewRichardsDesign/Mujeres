@@ -189,20 +189,136 @@
             <div class="content-container content-container--wide">
                 <h2 class="section-title">The March</h2>
                 <p class="section-body march-description">Celebrating strength, resilience, and the power of women everywhere.</p>
-                <p class="march-instruction">Choose a year, then click on a location to view details of that march.</p>
-                <div class="march-year-selector">
-                    <select id="march-year" class="year-dropdown">
-                        <option value="2026" selected>2026</option>
-                        <option value="2025">2025</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                    </select>
+
+                <!-- Map View (default) -->
+                <div id="march-map-view">
+                    <p class="march-instruction">Choose a year, then click on a location to view details of that march.</p>
+                    <div class="march-year-selector">
+                        <select id="march-year" class="year-dropdown">
+                            <option value="2026" selected>2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class="march-map-container">
+                        <div id="march-map"></div>
+                    </div>
                 </div>
-                <div class="march-map-container">
-                    <div id="march-map"></div>
+
+                <!-- Detail View (shown after selecting a location) -->
+                <div id="march-detail-view" style="display:none;">
+                    <button id="march-back-btn" class="march-back-btn">&larr; Back to map</button>
+                    <h3 class="march-location-title" id="march-location-title">Mexico 2026</h3>
+
+                    <div class="march-detail-header">
+                        <div class="march-detail-tabs">
+                            <button class="march-tab-btn active" data-march-tab="before">Before</button>
+                            <button class="march-tab-btn" data-march-tab="during">During</button>
+                            <button class="march-tab-btn" data-march-tab="after">After</button>
+                        </div>
+                        <div class="march-detail-filters">
+                            <select id="march-detail-location" class="year-dropdown">
+                                <option value="mexico" selected>Mexico</option>
+                            </select>
+                            <select id="march-detail-year" class="year-dropdown">
+                                <option value="2026" selected>2026</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Before Tab -->
+                    <div class="march-tab-panel active" id="march-tab-before">
+                        <div class="march-gallery">
+                            <div class="march-gallery-item march-gallery-large">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                        </div>
+                        <div class="march-testimonial">
+                            <p class="march-testimonial-label">Testimonial</p>
+                            <p class="march-testimonial-text">"The night before the march, we gathered in a small kitchen in Coyoacan to paint our signs. My grandmother's hands, steady at eighty-two, traced the words 'Ni Una Menos' in purple ink. She told us about the women who walked these same streets decades ago, how their voices were swallowed by silence. Tomorrow, she said, the city will hear us."</p>
+                            <div class="march-testimonial-media">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- During Tab -->
+                    <div class="march-tab-panel" id="march-tab-during">
+                        <div class="march-gallery">
+                            <div class="march-gallery-item march-gallery-large">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                        </div>
+                        <div class="march-testimonial">
+                            <p class="march-testimonial-label">Testimonial</p>
+                            <p class="march-testimonial-text">"By noon, Reforma was a river of purple and green. Thousands of us moved together — mothers with strollers, students with megaphones, workers on their lunch breaks. A woman beside me began singing and within seconds the entire block joined in. In that moment, I understood what solidarity actually feels like. We weren't just marching — we were reclaiming every street corner where a woman had ever felt afraid."</p>
+                            <div class="march-testimonial-media">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- After Tab -->
+                    <div class="march-tab-panel" id="march-tab-after">
+                        <div class="march-gallery">
+                            <div class="march-gallery-item march-gallery-large">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                            <div class="march-gallery-item">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                        </div>
+                        <div class="march-testimonial">
+                            <p class="march-testimonial-label">Testimonial</p>
+                            <p class="march-testimonial-text">"When we returned home that evening, my feet aching and my voice nearly gone, I sat on the curb and cried. Not from exhaustion, but from the overwhelming feeling that something had shifted. My daughter, only seven, looked at me and said, 'Mama, will we march again next year?' I held her close and whispered, 'Every year, mija, until we don't have to anymore.'"</p>
+                            <div class="march-testimonial-media">
+                                <div class="march-gallery-placeholder"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

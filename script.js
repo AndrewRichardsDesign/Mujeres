@@ -73,9 +73,75 @@ document.addEventListener('DOMContentLoaded', () => {
         }).addTo(marchMap);
 
         var mexicoCityMarker = L.marker([19.4326, -99.1332]).addTo(marchMap);
-        mexicoCityMarker.bindPopup('<strong>Mexico City</strong><br><a href="march.html" style="color:#5150f7;font-weight:600;">View the march</a>');
+        mexicoCityMarker.bindPopup('<strong>Mexico City</strong>');
         mexicoCityMarker.on('click', function () {
-            mexicoCityMarker.openPopup();
+            var selectedYear = document.getElementById('march-year').value;
+            showMarchDetail('Mexico', selectedYear);
+        });
+    }
+
+    function showMarchDetail(location, year) {
+        var mapView = document.getElementById('march-map-view');
+        var detailView = document.getElementById('march-detail-view');
+        var titleEl = document.getElementById('march-location-title');
+        var locationSelect = document.getElementById('march-detail-location');
+        var yearSelect = document.getElementById('march-detail-year');
+
+        titleEl.textContent = location + ' ' + year;
+        yearSelect.value = year;
+
+        var marchTabBtns = detailView.querySelectorAll('.march-tab-btn');
+        var marchTabPanels = detailView.querySelectorAll('.march-tab-panel');
+        marchTabBtns.forEach(function (b) { b.classList.remove('active'); });
+        marchTabPanels.forEach(function (p) { p.classList.remove('active'); });
+        marchTabBtns[0].classList.add('active');
+        document.getElementById('march-tab-before').classList.add('active');
+
+        mapView.style.display = 'none';
+        detailView.style.display = 'block';
+    }
+
+    function hideMarchDetail() {
+        var mapView = document.getElementById('march-map-view');
+        var detailView = document.getElementById('march-detail-view');
+        mapView.style.display = 'block';
+        detailView.style.display = 'none';
+        if (marchMap) {
+            setTimeout(function () { marchMap.invalidateSize(); }, 100);
+        }
+    }
+
+    var backBtn = document.getElementById('march-back-btn');
+    if (backBtn) {
+        backBtn.addEventListener('click', hideMarchDetail);
+    }
+
+    var marchDetailTabs = document.querySelectorAll('.march-tab-btn');
+    marchDetailTabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var target = btn.dataset.marchTab;
+            marchDetailTabs.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            document.querySelectorAll('.march-tab-panel').forEach(function (p) { p.classList.remove('active'); });
+            document.getElementById('march-tab-' + target).classList.add('active');
+        });
+    });
+
+    var urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('marchLocation')) {
+        activateSection('march');
+        setTimeout(function () {
+            showMarchDetail(urlParams.get('marchLocation'), urlParams.get('marchYear') || '2026');
+        }, 200);
+    }
+
+    var detailYearSelect = document.getElementById('march-detail-year');
+    if (detailYearSelect) {
+        detailYearSelect.addEventListener('change', function () {
+            var locationSelect = document.getElementById('march-detail-location');
+            var location = locationSelect.options[locationSelect.selectedIndex].text;
+            var titleEl = document.getElementById('march-location-title');
+            titleEl.textContent = location + ' ' + detailYearSelect.value;
         });
     }
 
