@@ -322,4 +322,29 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.toggle('flipped');
         });
     });
+
+    // ============================================
+    // Media Carousel (photo + videos)
+    // ============================================
+    document.querySelectorAll('.media-carousel').forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        let current = 0;
+
+        function goTo(idx) {
+            const prev = slides[current];
+            if (prev.tagName === 'VIDEO') prev.pause();
+            prev.classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (idx + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', e => { e.stopPropagation(); goTo(current - 1); });
+        nextBtn.addEventListener('click', e => { e.stopPropagation(); goTo(current + 1); });
+        dots.forEach((dot, i) => dot.addEventListener('click', e => { e.stopPropagation(); goTo(i); }));
+    });
 });
