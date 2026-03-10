@@ -51,6 +51,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
+    // Collaborator Modal
+    // ============================================
+    var collabModal = document.getElementById('collaborator-modal');
+    var collabModalOverlay = document.getElementById('collaborator-modal-overlay');
+    var collabModalClose = document.getElementById('collaborator-modal-close');
+
+    if (collabModal) {
+        document.querySelectorAll('.collaborator-card').forEach(function(card) {
+            card.addEventListener('click', function() {
+                collabModal.style.display = 'flex';
+            });
+        });
+
+        collabModalOverlay.addEventListener('click', function() {
+            collabModal.style.display = 'none';
+        });
+
+        collabModalClose.addEventListener('click', function() {
+            collabModal.style.display = 'none';
+        });
+    }
+
+    // ============================================
     // The March – Leaflet Map
     // ============================================
     let marchMap = null;
