@@ -73,10 +73,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }).addTo(marchMap);
 
         var mexicoCityMarker = L.marker([19.4326, -99.1332]).addTo(marchMap);
-        mexicoCityMarker.bindPopup('<strong>Mexico City</strong>');
         mexicoCityMarker.on('click', function () {
             var selectedYear = document.getElementById('march-year').value;
-            showMarchDetail('Mexico', selectedYear);
+            showPinModal('Mexico City', 'Mexico', selectedYear);
+        });
+    }
+
+    var currentPinLocation = '';
+    var currentPinYear = '';
+
+    function showPinModal(city, location, year) {
+        currentPinLocation = location;
+        currentPinYear = year;
+
+        document.getElementById('march-pin-modal-location').textContent = city;
+        document.getElementById('march-pin-modal-date').textContent = 'March 8, ' + year;
+        document.getElementById('march-pin-modal').style.display = 'flex';
+    }
+
+    function hidePinModal() {
+        document.getElementById('march-pin-modal').style.display = 'none';
+    }
+
+    var pinModalOverlay = document.getElementById('march-pin-modal-overlay');
+    var pinModalClose = document.getElementById('march-pin-modal-close');
+    var pinModalBtn = document.getElementById('march-pin-modal-btn');
+
+    if (pinModalOverlay) pinModalOverlay.addEventListener('click', hidePinModal);
+    if (pinModalClose) pinModalClose.addEventListener('click', hidePinModal);
+    if (pinModalBtn) {
+        pinModalBtn.addEventListener('click', function () {
+            hidePinModal();
+            showMarchDetail(currentPinLocation, currentPinYear);
         });
     }
 
@@ -128,10 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     var urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('marchLocation')) {
+    if (urlParams.get('marchDetail')) {
         activateSection('march');
         setTimeout(function () {
-            showMarchDetail(urlParams.get('marchLocation'), urlParams.get('marchYear') || '2026');
+            showMarchDetail(urlParams.get('marchDetail'), urlParams.get('marchYear') || '2026');
+        }, 200);
+    } else if (urlParams.get('marchLocation')) {
+        activateSection('march');
+        setTimeout(function () {
+            showPinModal(urlParams.get('marchLocation'), urlParams.get('marchLocation'), urlParams.get('marchYear') || '2026');
         }, 200);
     }
 

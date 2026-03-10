@@ -329,6 +329,142 @@ body {
     background: #e5e7eb;
 }
 
+.march-pin-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.march-pin-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.march-pin-modal-content {
+    position: relative;
+    background: #1a1a2e;
+    border-radius: 20px;
+    padding: 36px;
+    max-width: 520px;
+    width: 100%;
+    color: #ffffff;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.march-pin-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    line-height: 1;
+}
+
+.march-pin-modal-close:hover {
+    opacity: 1;
+}
+
+.march-pin-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.march-pin-modal-location {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.march-pin-modal-date {
+    font-size: 14px;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.march-pin-modal-theme {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.march-pin-modal-image {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.march-pin-modal-image .march-gallery-placeholder {
+    min-height: 220px;
+    background: linear-gradient(135deg, #3a3a5c 0%, #4b5563 100%);
+}
+
+.march-pin-modal-participants {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.march-pin-modal-causes h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.march-pin-modal-causes ol {
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+
+.march-pin-modal-causes li {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.march-pin-modal-action {
+    text-align: center;
+}
+
+.march-pin-modal-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.march-pin-modal-btn:hover {
+    background: #5150f7;
+    border-color: #5150f7;
+    box-shadow: 0 4px 16px rgba(81, 80, 247, 0.3);
+}
+
 .march-back-btn {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
