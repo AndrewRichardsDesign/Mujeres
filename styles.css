@@ -618,6 +618,65 @@ body {
 }
 
 /* ============================================
+   Activists Section
+   ============================================ */
+.activists-intro {
+    text-align: center;
+    font-weight: 600;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.activists-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.activist-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.activist-photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.activist-photo .march-gallery-placeholder {
+    min-height: 200px;
+}
+
+.activist-info {
+    flex: 1;
+}
+
+.activist-bio {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.activist-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.activist-link:hover {
+    color: #5150f7;
+}
+
+/* ============================================
    Tabs Section (march.html)
    ============================================ */
 .tabs-section {
@@ -966,6 +1025,20 @@ body {
 
     .march-gallery-large .march-gallery-placeholder {
         min-height: 220px;
+    }
+
+    .activist-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .activist-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .activist-photo .march-gallery-placeholder {
+        min-height: 160px;
     }
 
     .tabs-nav {
