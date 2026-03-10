@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPinYear = year;
 
         document.getElementById('march-pin-modal-location').textContent = city;
-        document.getElementById('march-pin-modal-date').textContent = 'March 8, ' + year;
+        var lang = localStorage.getItem('voces8m-lang') || 'en';
+        document.getElementById('march-pin-modal-date').textContent = lang === 'es' ? '8 de marzo, ' + year : 'March 8, ' + year;
         document.getElementById('march-pin-modal').style.display = 'flex';
     }
 

@@ -109,8 +109,34 @@ body {
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
-    opacity: 0.85;
+    opacity: 0.5;
     transition: opacity 0.2s ease;
+}
+
+.lang-link.active {
+    opacity: 1;
+}
+
+.march-lang-switcher {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    padding: 12px 24px;
+    background: #1a1a2e;
+}
+
+.march-lang-switcher .lang-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.march-lang-switcher .lang-link.active {
+    color: #fff;
+    opacity: 1;
+}
+
+.march-lang-switcher .lang-link:hover {
+    color: #fff;
+    opacity: 1;
 }
 
 .lang-link:hover {

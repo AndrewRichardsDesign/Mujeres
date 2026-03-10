@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="translations.js"></script>
 </head>
 <body>
 
@@ -16,24 +17,24 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="lang-switcher">
-            <a href="#" class="lang-link">Spanish</a>
-            <a href="#" class="lang-link">English</a>
+            <a href="#" class="lang-link" data-lang="es" data-i18n="lang.spanish">Spanish</a>
+            <a href="#" class="lang-link active" data-lang="en" data-i18n="lang.english">English</a>
         </div>
         <div class="hero-content">
-            <h1>Voces del 8M</h1>
-            <p class="hero-subtitle">Celebrating strength, resilience, and the power of women everywhere.</p>
-            <a href="#participate" class="hero-cta">Want to participate?</a>
+            <h1 data-i18n="hero.title">Voces del 8M</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Celebrating strength, resilience, and the power of women everywhere.</p>
+            <a href="#participate" class="hero-cta" data-i18n="hero.cta">Want to participate?</a>
         </div>
     </section>
 
     <!-- Navigation Bar -->
     <nav class="main-nav">
         <div class="nav-inner">
-            <a href="#participate" class="nav-link active">Participate</a>
-            <a href="#collaborators" class="nav-link">Collaborators</a>
-            <a href="#march" class="nav-link">The March</a>
-            <a href="#sheets" class="nav-link">Sheets</a>
-            <a href="#activists" class="nav-link">Activists</a>
+            <a href="#participate" class="nav-link active" data-i18n="nav.participate">Participate</a>
+            <a href="#collaborators" class="nav-link" data-i18n="nav.collaborators">Collaborators</a>
+            <a href="#march" class="nav-link" data-i18n="nav.march">The March</a>
+            <a href="#sheets" class="nav-link" data-i18n="nav.sheets">Sheets</a>
+            <a href="#activists" class="nav-link" data-i18n="nav.activists">Activists</a>
         </div>
     </nav>
 
@@ -43,11 +44,11 @@
         <!-- Participate Section -->
         <section id="participate" class="content-section active">
             <div class="content-container">
-                <h2 class="section-title">Participate</h2>
-                <p class="section-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim maximus dui, eget elementum ipsum aliquam vitae. Nam posuere bibendum quam vel vehicula. Aliquam luctus erat ac est faucibus vehicula. Sed et ante dignissim mauris mattis rutrum nec eu eros. Nulla in eros ut est tristique sollicitudin. In sagittis a erat eget suscipit. Integer quis lorem vitae enim posuere efficitur id sit amet justo. Ut aliquet neque id elementum lacinia. Vivamus gravida imperdiet posuere. Nulla ac congue libero. Morbi libero massa, placerat sit amet orci non, imperdiet tincidunt sem. Aenean eget nisl nec magna dapibus fringilla nec sed quam. Quisque at convallis tortor. Mauris lacinia ac justo sit amet volutpat. Integer lacinia facilisis nunc sed pellentesque. Fusce ac rhoncus lacus, vel finibus ligula.</p>
+                <h2 class="section-title" data-i18n="participate.title">Participate</h2>
+                <p class="section-body" data-i18n="participate.body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim maximus dui, eget elementum ipsum aliquam vitae. Nam posuere bibendum quam vel vehicula. Aliquam luctus erat ac est faucibus vehicula. Sed et ante dignissim mauris mattis rutrum nec eu eros. Nulla in eros ut est tristique sollicitudin. In sagittis a erat eget suscipit. Integer quis lorem vitae enim posuere efficitur id sit amet justo. Ut aliquet neque id elementum lacinia. Vivamus gravida imperdiet posuere. Nulla ac congue libero. Morbi libero massa, placerat sit amet orci non, imperdiet tincidunt sem. Aenean eget nisl nec magna dapibus fringilla nec sed quam. Quisque at convallis tortor. Mauris lacinia ac justo sit amet volutpat. Integer lacinia facilisis nunc sed pellentesque. Fusce ac rhoncus lacus, vel finibus ligula.</p>
 
                 <div class="contact-block">
-                    <p class="contact-intro">if you want to participate in this project, contact us.</p>
+                    <p class="contact-intro" data-i18n="participate.contact">if you want to participate in this project, contact us.</p>
                     <p class="contact-item contact-email">VocesDel8M@gmail.com</p>
                     <p class="contact-item contact-phone">+1 (908) 635 4081</p>
                 </div>
@@ -57,7 +58,7 @@
         <!-- Collaborators Section -->
         <section id="collaborators" class="content-section">
             <div class="content-container content-container--wide">
-                <h2 class="section-title">Collaborators</h2>
+                <h2 class="section-title" data-i18n="collaborators.title">Collaborators</h2>
                 <div class="collaborators-grid">
 
                     <div class="collaborator-card">
@@ -69,7 +70,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -81,7 +82,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -93,7 +94,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -105,7 +106,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -117,7 +118,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -129,7 +130,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -141,7 +142,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -153,7 +154,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -165,7 +166,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                     <div class="collaborator-card">
@@ -177,7 +178,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="collaborator-description">Description of person</p>
+                        <p class="collaborator-description" data-i18n="collaborators.description">Description of person</p>
                     </div>
 
                 </div>
@@ -187,12 +188,12 @@
         <!-- The March Section -->
         <section id="march" class="content-section">
             <div class="content-container content-container--wide">
-                <h2 class="section-title">The March</h2>
-                <p class="section-body march-description">Celebrating strength, resilience, and the power of women everywhere.</p>
+                <h2 class="section-title" data-i18n="march.title">The March</h2>
+                <p class="section-body march-description" data-i18n="march.description">Celebrating strength, resilience, and the power of women everywhere.</p>
 
                 <!-- Map View (default) -->
                 <div id="march-map-view">
-                    <p class="march-instruction">Choose a year, then click on a location to view details of that march.</p>
+                    <p class="march-instruction" data-i18n="march.instruction">Choose a year, then click on a location to view details of that march.</p>
                     <div class="march-year-selector">
                         <select id="march-year" class="year-dropdown">
                             <option value="2026" selected>2026</option>
@@ -218,22 +219,22 @@
                             <h3 class="march-pin-modal-location" id="march-pin-modal-location">Mexico City</h3>
                             <span class="march-pin-modal-date" id="march-pin-modal-date">March 8, 2026</span>
                         </div>
-                        <p class="march-pin-modal-theme" id="march-pin-modal-theme">Give to Gain</p>
+                        <p class="march-pin-modal-theme" id="march-pin-modal-theme" data-i18n="march.modal.theme">Give to Gain</p>
                         <div class="march-pin-modal-image">
                             <div class="march-gallery-placeholder"></div>
                         </div>
-                        <p class="march-pin-modal-participants" id="march-pin-modal-participants">120,000+ participants</p>
+                        <p class="march-pin-modal-participants" id="march-pin-modal-participants" data-i18n="march.modal.participants">120,000+ participants</p>
                         <div class="march-pin-modal-causes">
-                            <h4>Causes</h4>
+                            <h4 data-i18n="march.modal.causes">Causes</h4>
                             <ol id="march-pin-modal-causes-list">
-                                <li>An end to femicides and gender-based violence</li>
-                                <li>Justice for victims of violence</li>
-                                <li>Greater safety for women</li>
-                                <li>Recognition of disappearances and missing persons cases</li>
+                                <li data-i18n="march.modal.cause1">An end to femicides and gender-based violence</li>
+                                <li data-i18n="march.modal.cause2">Justice for victims of violence</li>
+                                <li data-i18n="march.modal.cause3">Greater safety for women</li>
+                                <li data-i18n="march.modal.cause4">Recognition of disappearances and missing persons cases</li>
                             </ol>
                         </div>
                         <div class="march-pin-modal-action">
-                            <button class="march-pin-modal-btn" id="march-pin-modal-btn">See the story</button>
+                            <button class="march-pin-modal-btn" id="march-pin-modal-btn" data-i18n="march.modal.btn">See the story</button>
                         </div>
                     </div>
                 </div>
@@ -243,11 +244,11 @@
                     <h3 class="march-location-title" id="march-location-title">Mexico 2026</h3>
 
                     <div class="march-detail-header">
-                        <button id="march-back-btn" class="march-back-btn">&larr; Map view</button>
+                        <button id="march-back-btn" class="march-back-btn" data-i18n="march.back">&larr; Map view</button>
                         <div class="march-detail-tabs">
-                            <button class="march-tab-btn active" data-march-tab="before">Before</button>
-                            <button class="march-tab-btn" data-march-tab="during">During</button>
-                            <button class="march-tab-btn" data-march-tab="after">After</button>
+                            <button class="march-tab-btn active" data-march-tab="before" data-i18n="march.tab.before">Before</button>
+                            <button class="march-tab-btn" data-march-tab="during" data-i18n="march.tab.during">During</button>
+                            <button class="march-tab-btn" data-march-tab="after" data-i18n="march.tab.after">After</button>
                         </div>
                         <div class="march-detail-filters">
                             <select id="march-detail-location" class="year-dropdown">
@@ -285,8 +286,8 @@
                             </div>
                         </div>
                         <div class="march-testimonial">
-                            <p class="march-testimonial-label">Testimonial</p>
-                            <p class="march-testimonial-text">"The night before the march, we gathered in a small kitchen in Coyoacan to paint our signs. My grandmother's hands, steady at eighty-two, traced the words 'Ni Una Menos' in purple ink. She told us about the women who walked these same streets decades ago, how their voices were swallowed by silence. Tomorrow, she said, the city will hear us."</p>
+                            <p class="march-testimonial-label" data-i18n="march.testimonial.label">Testimonial</p>
+                            <p class="march-testimonial-text" data-i18n="march.testimonial.before">"The night before the march, we gathered in a small kitchen in Coyoacan to paint our signs. My grandmother's hands, steady at eighty-two, traced the words 'Ni Una Menos' in purple ink. She told us about the women who walked these same streets decades ago, how their voices were swallowed by silence. Tomorrow, she said, the city will hear us."</p>
                             <div class="march-testimonial-media">
                                 <div class="march-gallery-placeholder"></div>
                             </div>
@@ -301,7 +302,7 @@
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <div class="photo-square"><div class="photo-placeholder">1</div></div>
-                                        <p class="photo-description">A quiet morning before the gathering begins, anticipation filling the air.</p>
+                                        <p class="photo-description" data-i18n="march.during.desc1">A quiet morning before the gathering begins, anticipation filling the air.</p>
                                         <div class="audio-player" data-audio="march-audio-1">
                                             <button class="play-btn" aria-label="Play audio">
                                                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
@@ -309,11 +310,11 @@
                                             </button>
                                             <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
                                         </div>
-                                        <button class="testimony-btn flip-btn">Read testimony</button>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.read">Read testimony</button>
                                     </div>
                                     <div class="card-back">
-                                        <p class="testimony-text">We arrived at the Zocalo just after sunrise. The plaza was nearly empty, but you could feel it — the energy of what was coming. Women were quietly setting up banners, arranging flowers in the shapes of names we refuse to forget. A street vendor offered us coffee and said, "Today, the city belongs to you."</p>
-                                        <button class="testimony-btn flip-btn">Back to photo</button>
+                                        <p class="testimony-text" data-i18n="march.during.testimony1">We arrived at the Zocalo just after sunrise. The plaza was nearly empty, but you could feel it — the energy of what was coming. Women were quietly setting up banners, arranging flowers in the shapes of names we refuse to forget. A street vendor offered us coffee and said, "Today, the city belongs to you."</p>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.back">Back to photo</button>
                                     </div>
                                 </div>
                             </div>
@@ -322,7 +323,7 @@
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <div class="photo-square"><div class="photo-placeholder">2</div></div>
-                                        <p class="photo-description">Voices unite in song, carrying stories passed through generations.</p>
+                                        <p class="photo-description" data-i18n="march.during.desc2">Voices unite in song, carrying stories passed through generations.</p>
                                         <div class="audio-player" data-audio="march-audio-2">
                                             <button class="play-btn" aria-label="Play audio">
                                                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
@@ -330,11 +331,11 @@
                                             </button>
                                             <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
                                         </div>
-                                        <button class="testimony-btn flip-btn">Read testimony</button>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.read">Read testimony</button>
                                     </div>
                                     <div class="card-back">
-                                        <p class="testimony-text">My abuela taught me the songs they sang in the seventies. I never understood them until I heard ten thousand women singing them in unison on Reforma. The melody carried decades of struggle, and every voice added another layer of defiance. We sang until our throats burned and then we sang louder.</p>
-                                        <button class="testimony-btn flip-btn">Back to photo</button>
+                                        <p class="testimony-text" data-i18n="march.during.testimony2">My abuela taught me the songs they sang in the seventies. I never understood them until I heard ten thousand women singing them in unison on Reforma. The melody carried decades of struggle, and every voice added another layer of defiance. We sang until our throats burned and then we sang louder.</p>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.back">Back to photo</button>
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +344,7 @@
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <div class="photo-square"><div class="photo-placeholder">3</div></div>
-                                        <p class="photo-description">Hands weaving together, creating something greater than the sum of its parts.</p>
+                                        <p class="photo-description" data-i18n="march.during.desc3">Hands weaving together, creating something greater than the sum of its parts.</p>
                                         <div class="audio-player" data-audio="march-audio-3">
                                             <button class="play-btn" aria-label="Play audio">
                                                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
@@ -351,11 +352,11 @@
                                             </button>
                                             <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
                                         </div>
-                                        <button class="testimony-btn flip-btn">Read testimony</button>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.read">Read testimony</button>
                                     </div>
                                     <div class="card-back">
-                                        <p class="testimony-text">Strangers became sisters that afternoon. A woman I had never met took my hand as we crossed the intersection. She was trembling — not from fear, but from the overwhelming feeling of being seen. We held each other up, two pillars in a sea of purple, and I knew neither of us would ever march alone again.</p>
-                                        <button class="testimony-btn flip-btn">Back to photo</button>
+                                        <p class="testimony-text" data-i18n="march.during.testimony3">Strangers became sisters that afternoon. A woman I had never met took my hand as we crossed the intersection. She was trembling — not from fear, but from the overwhelming feeling of being seen. We held each other up, two pillars in a sea of purple, and I knew neither of us would ever march alone again.</p>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.back">Back to photo</button>
                                     </div>
                                 </div>
                             </div>
@@ -364,7 +365,7 @@
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <div class="photo-square"><div class="photo-placeholder">4</div></div>
-                                        <p class="photo-description">Laughter echoes through the space, bonds strengthening with every moment.</p>
+                                        <p class="photo-description" data-i18n="march.during.desc4">Laughter echoes through the space, bonds strengthening with every moment.</p>
                                         <div class="audio-player" data-audio="march-audio-4">
                                             <button class="play-btn" aria-label="Play audio">
                                                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
@@ -372,11 +373,11 @@
                                             </button>
                                             <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
                                         </div>
-                                        <button class="testimony-btn flip-btn">Read testimony</button>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.read">Read testimony</button>
                                     </div>
                                     <div class="card-back">
-                                        <p class="testimony-text">Between the chants, there was laughter. Real, belly-deep laughter. My friend painted my face with glitter and we danced right there in the middle of the avenue. Joy is resistance too — they want us afraid, and we chose to be joyful. That laughter was the most radical act of the entire march.</p>
-                                        <button class="testimony-btn flip-btn">Back to photo</button>
+                                        <p class="testimony-text" data-i18n="march.during.testimony4">Between the chants, there was laughter. Real, belly-deep laughter. My friend painted my face with glitter and we danced right there in the middle of the avenue. Joy is resistance too — they want us afraid, and we chose to be joyful. That laughter was the most radical act of the entire march.</p>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.back">Back to photo</button>
                                     </div>
                                 </div>
                             </div>
@@ -385,7 +386,7 @@
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <div class="photo-square"><div class="photo-placeholder">5</div></div>
-                                        <p class="photo-description">A circle of trust, where every voice is heard and every story matters.</p>
+                                        <p class="photo-description" data-i18n="march.during.desc5">A circle of trust, where every voice is heard and every story matters.</p>
                                         <div class="audio-player" data-audio="march-audio-5">
                                             <button class="play-btn" aria-label="Play audio">
                                                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
@@ -393,11 +394,11 @@
                                             </button>
                                             <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
                                         </div>
-                                        <button class="testimony-btn flip-btn">Read testimony</button>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.read">Read testimony</button>
                                     </div>
                                     <div class="card-back">
-                                        <p class="testimony-text">We formed a circle near the Angel of Independence. One by one, women spoke the names of those we have lost. With each name, someone lit a candle. By the time we finished, the ground was a constellation of flames. In that circle, silence spoke louder than any megaphone ever could.</p>
-                                        <button class="testimony-btn flip-btn">Back to photo</button>
+                                        <p class="testimony-text" data-i18n="march.during.testimony5">We formed a circle near the Angel of Independence. One by one, women spoke the names of those we have lost. With each name, someone lit a candle. By the time we finished, the ground was a constellation of flames. In that circle, silence spoke louder than any megaphone ever could.</p>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.back">Back to photo</button>
                                     </div>
                                 </div>
                             </div>
@@ -406,7 +407,7 @@
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <div class="photo-square"><div class="photo-placeholder">6</div></div>
-                                        <p class="photo-description">Dancing under open skies, movement becomes the language of freedom.</p>
+                                        <p class="photo-description" data-i18n="march.during.desc6">Dancing under open skies, movement becomes the language of freedom.</p>
                                         <div class="audio-player" data-audio="march-audio-6">
                                             <button class="play-btn" aria-label="Play audio">
                                                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
@@ -414,11 +415,11 @@
                                             </button>
                                             <div class="progress-bar"><div class="progress-track"><div class="progress-fill"></div></div><span class="time-display">0:00</span></div>
                                         </div>
-                                        <button class="testimony-btn flip-btn">Read testimony</button>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.read">Read testimony</button>
                                     </div>
                                     <div class="card-back">
-                                        <p class="testimony-text">A group of Indigenous women from Oaxaca began a traditional dance in the middle of the march. The drums echoed off the buildings and suddenly everyone stopped walking. We watched, mesmerized, as their feet told stories older than the city itself. Their dance was a reminder that this fight did not begin with us, and it will not end with us.</p>
-                                        <button class="testimony-btn flip-btn">Back to photo</button>
+                                        <p class="testimony-text" data-i18n="march.during.testimony6">A group of Indigenous women from Oaxaca began a traditional dance in the middle of the march. The drums echoed off the buildings and suddenly everyone stopped walking. We watched, mesmerized, as their feet told stories older than the city itself. Their dance was a reminder that this fight did not begin with us, and it will not end with us.</p>
+                                        <button class="testimony-btn flip-btn" data-i18n="march.during.back">Back to photo</button>
                                     </div>
                                 </div>
                             </div>
@@ -446,8 +447,8 @@
                             </div>
                         </div>
                         <div class="march-testimonial">
-                            <p class="march-testimonial-label">Testimonial</p>
-                            <p class="march-testimonial-text">"When we returned home that evening, my feet aching and my voice nearly gone, I sat on the curb and cried. Not from exhaustion, but from the overwhelming feeling that something had shifted. My daughter, only seven, looked at me and said, 'Mama, will we march again next year?' I held her close and whispered, 'Every year, mija, until we don't have to anymore.'"</p>
+                            <p class="march-testimonial-label" data-i18n="march.testimonial.label">Testimonial</p>
+                            <p class="march-testimonial-text" data-i18n="march.testimonial.after">"When we returned home that evening, my feet aching and my voice nearly gone, I sat on the curb and cried. Not from exhaustion, but from the overwhelming feeling that something had shifted. My daughter, only seven, looked at me and said, 'Mama, will we march again next year?' I held her close and whispered, 'Every year, mija, until we don't have to anymore.'"</p>
                             <div class="march-testimonial-media">
                                 <div class="march-gallery-placeholder"></div>
                             </div>
@@ -460,7 +461,7 @@
         <!-- Sheets Section -->
         <section id="sheets" class="content-section">
             <div class="content-container content-container--wide">
-                <h2 class="section-title">Sheets</h2>
+                <h2 class="section-title" data-i18n="sheets.title">Sheets</h2>
                 <div class="march-gallery">
                     <div class="march-gallery-item march-gallery-large">
                         <div class="march-gallery-placeholder"></div>
@@ -484,112 +485,112 @@
         <!-- Activists Section -->
         <section id="activists" class="content-section">
             <div class="content-container content-container--wide">
-                <h2 class="section-title">Activists</h2>
-                <p class="section-body activists-intro">Some of the many people involved in 8M, passionate about making positive change in the world for the oppressed, victimized, and vulnerable.</p>
+                <h2 class="section-title" data-i18n="activists.title">Activists</h2>
+                <p class="section-body activists-intro" data-i18n="activists.intro">Some of the many people involved in 8M, passionate about making positive change in the world for the oppressed, victimized, and vulnerable.</p>
 
                 <div class="activists-list">
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Andrea is an Ecuadorian woman completing her PhD in Hispanic Linguistics in California, leading the Voces8M project to tell the diverse, heartbreaking, and inspirational stories of women marching in 8M.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio1">Andrea is an Ecuadorian woman completing her PhD in Hispanic Linguistics in California, leading the Voces8M project to tell the diverse, heartbreaking, and inspirational stories of women marching in 8M.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Caro is a German woman, starting her PhD in California, studying Spanish, and leading the Voces8M project to tell the diverse, heartbreaking, and inspirational stories of women marching in 8M.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio2">Caro is a German woman, starting her PhD in California, studying Spanish, and leading the Voces8M project to tell the diverse, heartbreaking, and inspirational stories of women marching in 8M.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Mariana is a Colombian woman working at an NGO in Mexico City, passionate about helping others and making their voices heard.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio3">Mariana is a Colombian woman working at an NGO in Mexico City, passionate about helping others and making their voices heard.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Lucia is a Mexican journalist documenting the stories of women affected by gender-based violence, using her platform to amplify marginalized voices across Latin America.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio4">Lucia is a Mexican journalist documenting the stories of women affected by gender-based violence, using her platform to amplify marginalized voices across Latin America.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Sofia is an Argentine human rights lawyer specializing in femicide cases, working tirelessly to ensure justice for families who have lost loved ones to violence.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio5">Sofia is an Argentine human rights lawyer specializing in femicide cases, working tirelessly to ensure justice for families who have lost loved ones to violence.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Valentina is a Chilean artist and educator who creates murals honoring the memory of women lost to violence, transforming public spaces into sites of remembrance.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio6">Valentina is a Chilean artist and educator who creates murals honoring the memory of women lost to violence, transforming public spaces into sites of remembrance.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Isabel is a Peruvian social worker running shelters for survivors of domestic violence, providing legal aid and emotional support to women rebuilding their lives.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio7">Isabel is a Peruvian social worker running shelters for survivors of domestic violence, providing legal aid and emotional support to women rebuilding their lives.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Camila is a Brazilian filmmaker producing documentaries about the feminist movement across South America, bringing untold stories to international audiences.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio8">Camila is a Brazilian filmmaker producing documentaries about the feminist movement across South America, bringing untold stories to international audiences.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Fernanda is a Guatemalan community organizer mobilizing Indigenous women to participate in civic life and fight for land rights and environmental justice.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio9">Fernanda is a Guatemalan community organizer mobilizing Indigenous women to participate in civic life and fight for land rights and environmental justice.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Daniela is a Uruguayan psychologist providing free trauma therapy to survivors of gender violence, training new counselors to expand access to mental health care.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio10">Daniela is a Uruguayan psychologist providing free trauma therapy to survivors of gender violence, training new counselors to expand access to mental health care.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Renata is a Dominican Republic-born poet and activist whose spoken word performances challenge machismo culture and inspire young women to find power in their own voices.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio11">Renata is a Dominican Republic-born poet and activist whose spoken word performances challenge machismo culture and inspire young women to find power in their own voices.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Alejandra is a Bolivian teacher who founded a network of safe houses along migration routes, offering shelter and resources to women and children fleeing violence.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio12">Alejandra is a Bolivian teacher who founded a network of safe houses along migration routes, offering shelter and resources to women and children fleeing violence.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
                     <div class="activist-row">
                         <div class="activist-photo"><div class="march-gallery-placeholder"></div></div>
                         <div class="activist-info">
-                            <p class="activist-bio">Gabriela is a Paraguayan data scientist using technology to track and report patterns of violence against women, building tools that inform policy and prevention strategies.</p>
-                            <a href="#" class="activist-link">Learn more</a>
+                            <p class="activist-bio" data-i18n="activists.bio13">Gabriela is a Paraguayan data scientist using technology to track and report patterns of violence against women, building tools that inform policy and prevention strategies.</p>
+                            <a href="#" class="activist-link" data-i18n="activists.learn">Learn more</a>
                         </div>
                     </div>
 
