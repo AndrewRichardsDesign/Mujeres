@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
@@ -30,7 +31,7 @@
         <div class="nav-inner">
             <a href="#participate" class="nav-link active">Participate</a>
             <a href="#collaborators" class="nav-link">Collaborators</a>
-            <a href="march.html" class="nav-link">The March</a>
+            <a href="#march" class="nav-link">The March</a>
             <a href="#sheets" class="nav-link">Sheets</a>
             <a href="#activists" class="nav-link">Activists</a>
         </div>
@@ -183,6 +184,29 @@
             </div>
         </section>
 
+        <!-- The March Section -->
+        <section id="march" class="content-section">
+            <div class="content-container content-container--wide">
+                <h2 class="section-title">The March</h2>
+                <p class="section-body march-description">Celebrating strength, resilience, and the power of women everywhere. Celebrating strength, resilience, and the power of women everywhere.</p>
+                <p class="march-instruction">Select the country and year that you want to see.</p>
+                <div class="march-year-selector">
+                    <select id="march-year" class="year-dropdown">
+                        <option value="2026" selected>2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="march-map-container">
+                    <div id="march-map"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Sheets Section -->
         <section id="sheets" class="content-section">
             <div class="content-container">
@@ -201,6 +225,7 @@
 
     </main>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

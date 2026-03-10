@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sections.forEach(s => s.classList.remove('active'));
         targetSection.classList.add('active');
+
+        if (targetId === 'march') {
+            setTimeout(function () {
+                initMarchMap();
+                if (marchMap) marchMap.invalidateSize();
+            }, 150);
+        }
+
         return true;
     }
 
@@ -41,6 +49,35 @@ document.addEventListener('DOMContentLoaded', () => {
             activateSection('participate');
         }
     });
+
+    // ============================================
+    // The March – Leaflet Map
+    // ============================================
+    let marchMap = null;
+
+    function initMarchMap() {
+        if (marchMap) return;
+        const mapEl = document.getElementById('march-map');
+        if (!mapEl) return;
+
+        marchMap = L.map('march-map', {
+            center: [20, 0],
+            zoom: 2,
+            minZoom: 2,
+            maxZoom: 18,
+            worldCopyJump: true
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(marchMap);
+
+        var mexicoCityMarker = L.marker([19.4326, -99.1332]).addTo(marchMap);
+        mexicoCityMarker.bindPopup('<strong>Mexico City</strong><br><a href="march.html" style="color:#5150f7;font-weight:600;">View the march</a>');
+        mexicoCityMarker.on('click', function () {
+            mexicoCityMarker.openPopup();
+        });
+    }
 
     // ============================================
     // Tab Navigation (march.html)
