@@ -229,21 +229,37 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentlyPlaying = null;
     const audioInstances = new Map();
 
-    const DEMO_DURATION = 30;
-
     players.forEach(player => {
         const playBtn = player.querySelector('.play-btn');
         const progressTrack = player.querySelector('.progress-track');
         const progressFill = player.querySelector('.progress-fill');
         const timeDisplay = player.querySelector('.time-display');
         const audioId = player.dataset.audio;
+        const audioSrc = player.dataset.src;
 
-        const state = {
-            playing: false,
-            progress: 0,
-            interval: null
-        };
-        audioInstances.set(audioId, { state, player, playBtn, progressFill, timeDisplay });
+        const audio = new Audio();
+        if (audioSrc) audio.src = audioSrc;
+        audio.preload = 'metadata';
+
+        const state = { playing: false };
+        audioInstances.set(audioId, { state, player, playBtn, progressFill, timeDisplay, audio });
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const pct = (audio.currentTime / audio.duration) * 100;
+                progressFill.style.width = pct + '%';
+                timeDisplay.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        audio.addEventListener('ended', () => {
+            state.playing = false;
+            playBtn.classList.remove('playing');
+            progressFill.style.width = '0%';
+            timeDisplay.textContent = '0:00';
+            audio.currentTime = 0;
+            if (currentlyPlaying === audioId) currentlyPlaying = null;
+        });
 
         playBtn.addEventListener('click', () => {
             if (state.playing) {
@@ -257,48 +273,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         progressTrack.addEventListener('click', (e) => {
+            if (!audio.duration) return;
             const rect = progressTrack.getBoundingClientRect();
             const clickX = e.clientX - rect.left;
-            const percentage = (clickX / rect.width) * 100;
-            state.progress = Math.max(0, Math.min(100, percentage));
-            progressFill.style.width = state.progress + '%';
-            timeDisplay.textContent = formatTime((state.progress / 100) * DEMO_DURATION);
+            const pct = clickX / rect.width;
+            audio.currentTime = pct * audio.duration;
         });
     });
 
     function playAudio(audioId) {
         const instance = audioInstances.get(audioId);
         if (!instance) return;
-
-        const { state, playBtn, progressFill, timeDisplay } = instance;
+        const { state, playBtn, audio } = instance;
         state.playing = true;
         playBtn.classList.add('playing');
         currentlyPlaying = audioId;
-
-        state.interval = setInterval(() => {
-            state.progress += (100 / DEMO_DURATION) * 0.1;
-            if (state.progress >= 100) {
-                state.progress = 0;
-                pauseAudio(audioId);
-                return;
-            }
-            progressFill.style.width = state.progress + '%';
-            timeDisplay.textContent = formatTime((state.progress / 100) * DEMO_DURATION);
-        }, 100);
+        audio.play().catch(() => {});
     }
 
     function pauseAudio(audioId) {
         const instance = audioInstances.get(audioId);
         if (!instance) return;
-
-        const { state, playBtn } = instance;
+        const { state, playBtn, audio } = instance;
         state.playing = false;
         playBtn.classList.remove('playing');
-        clearInterval(state.interval);
-
-        if (currentlyPlaying === audioId) {
-            currentlyPlaying = null;
-        }
+        audio.pause();
+        if (currentlyPlaying === audioId) currentlyPlaying = null;
     }
 
     function stopAllAudio() {
