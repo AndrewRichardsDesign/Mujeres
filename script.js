@@ -6,22 +6,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
     const sections = document.querySelectorAll('.content-section');
 
+    function activateSection(targetId) {
+        const targetSection = document.getElementById(targetId);
+        if (!targetSection) return false;
+
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        const matchingLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
+        if (matchingLink) matchingLink.classList.add('active');
+
+        sections.forEach(s => s.classList.remove('active'));
+        targetSection.classList.add('active');
+        return true;
+    }
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (!targetSection) return;
-
             e.preventDefault();
-
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-
-            // Update active section
-            sections.forEach(s => s.classList.remove('active'));
-            targetSection.classList.add('active');
+            if (activateSection(targetId)) {
+                history.pushState(null, '', '#' + targetId);
+            }
         });
+    });
+
+    if (window.location.hash) {
+        const hashId = window.location.hash.substring(1);
+        activateSection(hashId);
+    }
+
+    window.addEventListener('popstate', () => {
+        if (window.location.hash) {
+            activateSection(window.location.hash.substring(1));
+        } else {
+            activateSection('participate');
+        }
     });
 
     // ============================================

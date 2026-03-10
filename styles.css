@@ -219,6 +219,54 @@ body {
 }
 
 /* ============================================
+   Collaborators Grid
+   ============================================ */
+.content-container--wide {
+    max-width: 1120px;
+}
+
+.collaborators-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.collaborator-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collaborator-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.collaborator-photo {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #e8e7ff 0%, #f0edff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collaborator-placeholder {
+    width: 80px;
+    height: 80px;
+    color: #5150f7;
+    opacity: 0.25;
+}
+
+.collaborator-description {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* ============================================
    Tabs Section (march.html)
    ============================================ */
 .tabs-section {
@@ -535,6 +583,11 @@ body {
     }
 
     .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .collaborators-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
