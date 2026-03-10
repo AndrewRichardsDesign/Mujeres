@@ -338,8 +338,8 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    margin-bottom: 16px;
     transition: opacity 0.2s ease;
+    white-space: nowrap;
 }
 
 .march-back-btn:hover {
@@ -358,9 +358,15 @@ body {
 .march-detail-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 32px;
     gap: 16px;
+    position: relative;
+}
+
+.march-detail-header .march-back-btn {
+    position: absolute;
+    left: 0;
 }
 
 .march-detail-tabs {
@@ -399,6 +405,11 @@ body {
 .march-detail-filters {
     display: flex;
     gap: 8px;
+}
+
+.march-detail-header .march-detail-filters {
+    position: absolute;
+    right: 0;
 }
 
 .march-tab-panel {
