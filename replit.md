@@ -10,7 +10,22 @@ A static website for "Voces del 8M" — a project celebrating International Wome
 - `script.js` — Client-side JavaScript for navigation/interactivity
 - `translations.js` — i18n translation dictionary (English/Spanish) and language switching logic
 - `server.js` — Simple Node.js HTTP server to serve static files on port 5000
+- `fetch-drive-photos.js` — Utility script to fetch photos from Google Drive (uses @replit/connectors-sdk)
+- `images/` — Downloaded photos from Google Drive "Website 8M" folder
 - `CNAME` — Custom domain: www.voces8m.com
+
+## Images (from Google Drive)
+
+Downloaded from the "Website 8M" folder. Contains:
+- **Collaborator profile photos**: helen-caridad.jpg, mel-pacheco.jpg, model.jpg, valeria.jpg, kim-carolina.jpg, gordofobia.jpg, brenda.jpg
+- **March photos** (March 8, 2026): 20 timestamped photos (20260308_*.jpg)
+- **Instagram screenshots**: 5 screenshot images
+
+## Google Drive Integration
+
+- Connected via Replit's Google Drive connector (connection ID: conn_google-drive_01KKCR1Y05N47CWFQBAP5JQXJX)
+- Uses `@replit/connectors-sdk` for authenticated API requests
+- `fetch-drive-photos.js` supports: `folders`, `list <folderId>`, `download <folderId> [destDir]`
 
 ## Localization (i18n)
 
