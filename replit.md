@@ -19,7 +19,7 @@ A static website for "Voces del 8M" — a project celebrating International Wome
 ## The March — During Tab
 
 10 cards with real content from the March 8, 2026 event in Mexico City:
-- Cards 1-10: Majo&Mafer, Helen&Caridad, Model, Gordofobia, Angeles(2 audios), Valeria, Brenda, Kim&Carolina, Montserrat, Trans
+- Cards 1-10: Majo&Mafer, Helen&Caridad, Jannai, Collectivo Gordofobia, Angeles(2 audios), Valeria, Brenda, Kim&Carolina, Monserrat, Esotérica
 - All cards have photos + audio + AI-generated testimony summaries
 - Card 5 (Angeles) has two inline audio players side by side (5.m4a + 5.1.m4a)
 - Audio files are real interviews recorded at the march (Spanish)
