@@ -121,9 +121,9 @@ body {
    Main Navigation
    ============================================ */
 .main-nav {
-    background: #5150f7;
+    background: #FFFFFF;
     padding: 16px 0;
-    box-shadow: 0 2px 12px rgba(81, 80, 247, 0.2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .nav-inner {
@@ -136,11 +136,11 @@ body {
 }
 
 .nav-link {
-    color: #ffffff;
+    color: #1a1a2e;
     text-decoration: none;
     font-size: 17px;
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.6;
     transition: opacity 0.2s ease;
     padding: 4px 0;
 }
@@ -151,7 +151,7 @@ body {
 
 .nav-link.active {
     opacity: 1;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #5150f7;
 }
 
 /* ============================================
