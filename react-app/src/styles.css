@@ -676,6 +676,21 @@ body {
 .march-tab-panel.active {
     display: block;
 }
+.artivismo-card {
+    max-width: 600px;
+}
+.artivismo-card .gallery-img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+}
+.artivismo-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #374151;
+    margin: 12px 0;
+    font-weight: 500;
+}
 .march-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
