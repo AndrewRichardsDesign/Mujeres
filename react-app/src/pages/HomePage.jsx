@@ -63,7 +63,7 @@ export default function HomePage() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
-  const activists = Array.from({ length: 13 }, (_, i) => i + 1);
+  const activists = [1, 2];
 
   return (
     <>
