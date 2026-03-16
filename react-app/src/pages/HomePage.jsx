@@ -223,7 +223,6 @@ export default function HomePage() {
                     </div>
                     <div className="activist-info">
                       <p className="activist-bio">{t(`activists.bio${i}`)}</p>
-                      <a href="#" className="activist-link">{t('activists.learn')}</a>
                     </div>
                   </div>
                 ))}
@@ -231,12 +230,18 @@ export default function HomePage() {
             </div>
 
             <div className={`march-tab-panel${activistsTab === 'artivismo' ? ' active' : ''}`}>
-              <div className="artivismo-card">
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/artivismo-19.jpg" alt={t('activists.artivismo.desc19')} />
+              <div className="activists-list">
+                <div className="activist-row">
+                  <div className="activist-photo">
+                    <img className="gallery-img" src="/images/artivismo-19.jpg" alt={t('activists.artivismo.desc19')} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <div className="activist-info">
+                    <p className="activist-bio">{t('activists.artivismo.desc19')}</p>
+                    <div className="artivismo-mini-player">
+                      <AudioPlayer audioId="artivismo-19" src="/audio/artivismo-19.mp3" />
+                    </div>
+                  </div>
                 </div>
-                <p className="artivismo-caption">{t('activists.artivismo.desc19')}</p>
-                <AudioPlayer audioId="artivismo-19" src="/audio/artivismo-19.mp3" />
               </div>
             </div>
           </div>
