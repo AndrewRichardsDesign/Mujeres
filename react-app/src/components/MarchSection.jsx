@@ -272,18 +272,12 @@ export default function MarchSection({ isActive }) {
 
           {/* After Tab */}
           <div className={`march-tab-panel${detailTab === 'after' ? ' active' : ''}`}>
-            <div className="march-photo-gallery">
-              <div className="gallery-row gallery-row-full">
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/newspaper.jpg" alt="Newspaper coverage of the march" />
-                </div>
+            <div className="after-split-layout">
+              <div className="after-image-column">
+                <img className="gallery-img" src="/images/newspaper.jpg" alt="Newspaper coverage of the march" />
               </div>
-            </div>
-            <div className="march-testimonial">
-              <p className="march-testimonial-label">{t('march.testimonial.label')}</p>
-              <p className="march-testimonial-text">{t('march.testimonial.after')}</p>
-              <div className="march-testimonial-media">
-                <div className="march-gallery-placeholder" />
+              <div className="after-text-column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
             </div>
           </div>

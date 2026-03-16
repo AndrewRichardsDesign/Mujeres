@@ -723,6 +723,37 @@ body {
 .march-testimonial-media .march-gallery-placeholder {
     min-height: 280px;
 }
+/* After Tab Split Layout */
+.after-split-layout {
+    display: flex;
+    gap: 24px;
+}
+.after-image-column {
+    flex: 2;
+    min-width: 0;
+}
+.after-image-column .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.after-text-column {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+.after-text-column p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4b5563;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .after-split-layout {
+        flex-direction: column;
+    }
+}
 /* ============================================
    Activists Section
    ============================================ */
