@@ -5,7 +5,7 @@ import PhotoCard from './PhotoCard';
 export default function MarchSection({ isActive }) {
   const { lang, t } = useLanguage();
   const [year, setYear] = useState('2026');
-  const [pinModalOpen, setPinModalOpen] = useState(false);
+  const [pinModalOpen, setPinModalOpen] = useState(null);
   const [detailView, setDetailView] = useState(false);
   const [detailTab, setDetailTab] = useState('before');
   const [detailYear, setDetailYear] = useState('2026');
@@ -33,8 +33,11 @@ export default function MarchSection({ isActive }) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
 
-      const marker = L.marker([19.4326, -99.1332]).addTo(map);
-      marker.on('click', () => setPinModalOpen(true));
+      const markerMexico = L.marker([19.4326, -99.1332]).addTo(map);
+      markerMexico.on('click', () => setPinModalOpen('mexico'));
+
+      const markerQuito = L.marker([-0.1807, -78.4678]).addTo(map);
+      markerQuito.on('click', () => setPinModalOpen('quito'));
 
       mapInstanceRef.current = map;
     }, 150);
@@ -48,10 +51,12 @@ export default function MarchSection({ isActive }) {
     }
   }, [isActive, detailView]);
 
-  const showDetail = () => {
-    setPinModalOpen(false);
+  const showDetail = (location) => {
+    const loc = location || 'mexico';
+    setPinModalOpen(null);
     setDetailView(true);
-    setDetailTab('before');
+    setDetailLocation(loc);
+    if (loc === 'mexico') setDetailTab('before');
   };
 
   const hideDetail = () => {
@@ -109,12 +114,12 @@ export default function MarchSection({ isActive }) {
         </div>
       </div>
 
-      {/* Pin Modal */}
-      {pinModalOpen && (
+      {/* Pin Modal - Mexico */}
+      {pinModalOpen === 'mexico' && (
         <div className="march-pin-modal" style={{ display: 'flex' }}>
-          <div className="march-pin-modal-overlay" onClick={() => setPinModalOpen(false)} />
+          <div className="march-pin-modal-overlay" onClick={() => setPinModalOpen(null)} />
           <div className="march-pin-modal-content">
-            <button className="march-pin-modal-close" onClick={() => setPinModalOpen(false)}>
+            <button className="march-pin-modal-close" onClick={() => setPinModalOpen(null)}>
               &times;
             </button>
             <div className="march-pin-modal-header">
@@ -138,7 +143,44 @@ export default function MarchSection({ isActive }) {
               </ol>
             </div>
             <div className="march-pin-modal-action">
-              <button className="march-pin-modal-btn" onClick={showDetail}>
+              <button className="march-pin-modal-btn" onClick={() => showDetail('mexico')}>
+                {t('march.modal.btn')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pin Modal - Quito */}
+      {pinModalOpen === 'quito' && (
+        <div className="march-pin-modal" style={{ display: 'flex' }}>
+          <div className="march-pin-modal-overlay" onClick={() => setPinModalOpen(null)} />
+          <div className="march-pin-modal-content">
+            <button className="march-pin-modal-close" onClick={() => setPinModalOpen(null)}>
+              &times;
+            </button>
+            <div className="march-pin-modal-header">
+              <h3 className="march-pin-modal-location">Quito</h3>
+              <span className="march-pin-modal-date">
+                {lang === 'es' ? `8 de marzo, ${year}` : `March 8, ${year}`}
+              </span>
+            </div>
+            <p className="march-pin-modal-theme">{t('march.modal.quito.theme')}</p>
+            <div className="march-pin-modal-image">
+              <div className="march-gallery-placeholder" style={{ minHeight: '200px' }} />
+            </div>
+            <p className="march-pin-modal-participants">{t('march.modal.quito.participants')}</p>
+            <div className="march-pin-modal-causes">
+              <h4>{t('march.modal.causes')}</h4>
+              <ol>
+                <li>{t('march.modal.quito.cause1')}</li>
+                <li>{t('march.modal.quito.cause2')}</li>
+                <li>{t('march.modal.quito.cause3')}</li>
+                <li>{t('march.modal.quito.cause4')}</li>
+              </ol>
+            </div>
+            <div className="march-pin-modal-action">
+              <button className="march-pin-modal-btn" onClick={() => showDetail('quito')}>
                 {t('march.modal.btn')}
               </button>
             </div>
@@ -156,17 +198,19 @@ export default function MarchSection({ isActive }) {
             <button className="march-back-btn" onClick={hideDetail}>
               {t('march.back')}
             </button>
-            <div className="march-detail-tabs">
-              {['before', 'during', 'after'].map((tab) => (
-                <button
-                  key={tab}
-                  className={`march-tab-btn${detailTab === tab ? ' active' : ''}`}
-                  onClick={() => setDetailTab(tab)}
-                >
-                  {t(`march.tab.${tab}`)}
-                </button>
-              ))}
-            </div>
+            {detailLocation === 'mexico' && (
+              <div className="march-detail-tabs">
+                {['before', 'during', 'after'].map((tab) => (
+                  <button
+                    key={tab}
+                    className={`march-tab-btn${detailTab === tab ? ' active' : ''}`}
+                    onClick={() => setDetailTab(tab)}
+                  >
+                    {t(`march.tab.${tab}`)}
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="march-detail-filters">
               <select
                 className="year-dropdown"
@@ -186,102 +230,143 @@ export default function MarchSection({ isActive }) {
             </div>
           </div>
 
-          {/* Before Tab */}
-          <div className={`march-tab-panel${detailTab === 'before' ? ' active' : ''}`}>
-            <div className="photo-grid">
-              {beforeCards.map((card, i) => (
-                <PhotoCard
-                  key={`before-${i}`}
-                  imgSrc={card.img}
-                  altText={card.alt}
-                  descKey={card.desc}
-                  testimonyKey={card.testimony}
-                  audioId={card.audioId}
-                  audioSrc={card.audioSrc}
-                />
-              ))}
-            </div>
-            <div className="march-photo-gallery">
-              <div className="gallery-row gallery-row-3">
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/before-paper1.jpg" alt="Before the march 1" />
+          {detailLocation === 'mexico' && (
+            <>
+              {/* Before Tab */}
+              <div className={`march-tab-panel${detailTab === 'before' ? ' active' : ''}`}>
+                <div className="photo-grid">
+                  {beforeCards.map((card, i) => (
+                    <PhotoCard
+                      key={`before-${i}`}
+                      imgSrc={card.img}
+                      altText={card.alt}
+                      descKey={card.desc}
+                      testimonyKey={card.testimony}
+                      audioId={card.audioId}
+                      audioSrc={card.audioSrc}
+                    />
+                  ))}
                 </div>
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/before-paper2.jpg" alt="Before the march 2" />
-                </div>
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/before-paper3.jpg" alt="Before the march 3" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* During Tab */}
-          <div className={`march-tab-panel${detailTab === 'during' ? ' active' : ''}`}>
-            <div className="photo-grid">
-              {duringCards.map((card, i) => (
-                <PhotoCard
-                  key={`during-${i}`}
-                  imgSrc={card.img}
-                  altText={card.alt}
-                  descKey={card.desc}
-                  testimonyKey={card.testimony}
-                  audioId={card.audioId}
-                  audioSrc={card.audioSrc}
-                  audioId2={card.audioId2}
-                  audioSrc2={card.audioSrc2}
-                  carouselMedia={card.carouselMedia}
-                />
-              ))}
-            </div>
-            <div className="march-photo-gallery">
-              {/* Row 1: large left + 2 stacked right */}
-              <div className="gallery-row gallery-row-1-2">
-                <div className="gallery-item gallery-large">
-                  <img className="gallery-img" src="/images/gallery-13.jpg" alt="During the march 13" />
-                </div>
-                <div className="gallery-stack">
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/gallery-14.jpg" alt="During the march 14" />
-                  </div>
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/gallery-15.jpg" alt="During the march 15" />
+                <div className="march-photo-gallery">
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/before-paper1.jpg" alt="Before the march 1" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/before-paper2.jpg" alt="Before the march 2" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/before-paper3.jpg" alt="Before the march 3" />
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* Row 2: three equal */}
-              <div className="gallery-row gallery-row-3">
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/gallery-16.jpg" alt="During the march 16" />
-                </div>
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/gallery-17.jpg" alt="During the march 17" />
-                </div>
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/gallery-18.jpg" alt="During the march 18" />
-                </div>
-              </div>
-              {/* Row 3: full width */}
-              <div className="gallery-row gallery-row-full">
-                <div className="gallery-item">
-                  <img className="gallery-img" src="/images/gallery-19.jpg" alt="During the march 19" />
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* After Tab */}
-          <div className={`march-tab-panel${detailTab === 'after' ? ' active' : ''}`}>
-            <div className="after-split-layout">
-              <div className="after-image-column">
-                <img className="gallery-img" src="/images/newspaper.jpg" alt="Newspaper coverage of the march" />
+              {/* During Tab */}
+              <div className={`march-tab-panel${detailTab === 'during' ? ' active' : ''}`}>
+                <div className="photo-grid">
+                  {duringCards.map((card, i) => (
+                    <PhotoCard
+                      key={`during-${i}`}
+                      imgSrc={card.img}
+                      altText={card.alt}
+                      descKey={card.desc}
+                      testimonyKey={card.testimony}
+                      audioId={card.audioId}
+                      audioSrc={card.audioSrc}
+                      audioId2={card.audioId2}
+                      audioSrc2={card.audioSrc2}
+                      carouselMedia={card.carouselMedia}
+                    />
+                  ))}
+                </div>
+                <div className="march-photo-gallery">
+                  {/* Row 1: large left + 2 stacked right */}
+                  <div className="gallery-row gallery-row-1-2">
+                    <div className="gallery-item gallery-large">
+                      <img className="gallery-img" src="/images/gallery-13.jpg" alt="During the march 13" />
+                    </div>
+                    <div className="gallery-stack">
+                      <div className="gallery-item">
+                        <img className="gallery-img" src="/images/gallery-14.jpg" alt="During the march 14" />
+                      </div>
+                      <div className="gallery-item">
+                        <img className="gallery-img" src="/images/gallery-15.jpg" alt="During the march 15" />
+                      </div>
+                    </div>
+                  </div>
+                  {/* Row 2: three equal */}
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/gallery-16.jpg" alt="During the march 16" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/gallery-17.jpg" alt="During the march 17" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/gallery-18.jpg" alt="During the march 18" />
+                    </div>
+                  </div>
+                  {/* Row 3: full width */}
+                  <div className="gallery-row gallery-row-full">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/gallery-19.jpg" alt="During the march 19" />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="after-text-column">
-                <p>El diario mexicano La Jornada documentó la magnitud de la movilización del 8 de marzo en CDMX bajo el titular "Mujeres exigen justicia y fin de la violencia". Según el reporte, alrededor de 120 mil personas participaron en la marcha, sumándose a las protestas globales del Día Internacional de la Mujer. La cobertura destacó las principales demandas del movimiento: el fin de los feminicidios, las desapariciones, la violencia sexual, la trata, así como la denuncia de la impunidad y la desigualdad estructural.</p>
-                <p>El periódico también subrayó que niñxs y adolescentes se encuentran entre las principales víctimas de agresiones sexuales, y registró la diversidad de voces presentes en la movilización, desde colectivas feministas hasta mujeres indígenas y familias de víctimas. Las imágenes publicadas muestran la fuerza simbólica y emocional de la jornada, con calles teñidas de morado y miles de participantes exigiendo justicia, seguridad y respeto a sus derechos. La nota sitúa la protesta dentro de un contexto nacional e internacional de creciente exigencia social frente a la violencia de género.</p>
+
+              {/* After Tab */}
+              <div className={`march-tab-panel${detailTab === 'after' ? ' active' : ''}`}>
+                <div className="after-split-layout">
+                  <div className="after-image-column">
+                    <img className="gallery-img" src="/images/newspaper.jpg" alt="Newspaper coverage of the march" />
+                  </div>
+                  <div className="after-text-column">
+                    <p>El diario mexicano La Jornada documentó la magnitud de la movilización del 8 de marzo en CDMX bajo el titular "Mujeres exigen justicia y fin de la violencia". Según el reporte, alrededor de 120 mil personas participaron en la marcha, sumándose a las protestas globales del Día Internacional de la Mujer. La cobertura destacó las principales demandas del movimiento: el fin de los feminicidios, las desapariciones, la violencia sexual, la trata, así como la denuncia de la impunidad y la desigualdad estructural.</p>
+                    <p>El periódico también subrayó que niñxs y adolescentes se encuentran entre las principales víctimas de agresiones sexuales, y registró la diversidad de voces presentes en la movilización, desde colectivas feministas hasta mujeres indígenas y familias de víctimas. Las imágenes publicadas muestran la fuerza simbólica y emocional de la jornada, con calles teñidas de morado y miles de participantes exigiendo justicia, seguridad y respeto a sus derechos. La nota sitúa la protesta dentro de un contexto nacional e internacional de creciente exigencia social frente a la violencia de género.</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {detailLocation === 'quito' && (
+            <div className="march-tab-panel active">
+              <div className="march-photo-gallery">
+                {/* Row 1: large left + 2x2 grid right */}
+                <div className="gallery-row gallery-row-1-2">
+                  <div className="gallery-item gallery-large">
+                    <div className="march-gallery-placeholder" />
+                  </div>
+                  <div className="gallery-stack">
+                    <div className="gallery-row" style={{ gap: '12px' }}>
+                      <div className="gallery-item">
+                        <div className="march-gallery-placeholder" />
+                      </div>
+                      <div className="gallery-item">
+                        <div className="march-gallery-placeholder" />
+                      </div>
+                    </div>
+                    <div className="gallery-row" style={{ gap: '12px' }}>
+                      <div className="gallery-item">
+                        <div className="march-gallery-placeholder" />
+                      </div>
+                      <div className="gallery-item">
+                        <div className="march-gallery-placeholder" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Row 2: single item left */}
+                <div className="gallery-row">
+                  <div className="gallery-item" style={{ flex: '0 0 calc(33.33% - 4px)' }}>
+                    <div className="march-gallery-placeholder" />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </div>
