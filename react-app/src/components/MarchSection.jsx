@@ -234,6 +234,40 @@ export default function MarchSection({ isActive }) {
                 />
               ))}
             </div>
+            <div className="march-photo-gallery">
+              {/* Row 1: large left + 2 stacked right */}
+              <div className="gallery-row gallery-row-1-2">
+                <div className="gallery-item gallery-large">
+                  <img className="gallery-img" src="/images/gallery-13.jpg" alt="During the march 13" />
+                </div>
+                <div className="gallery-stack">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/gallery-14.jpg" alt="During the march 14" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/gallery-15.jpg" alt="During the march 15" />
+                  </div>
+                </div>
+              </div>
+              {/* Row 2: three equal */}
+              <div className="gallery-row gallery-row-3">
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/gallery-16.jpg" alt="During the march 16" />
+                </div>
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/gallery-17.jpg" alt="During the march 17" />
+                </div>
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/gallery-18.jpg" alt="During the march 18" />
+                </div>
+              </div>
+              {/* Row 3: full width */}
+              <div className="gallery-row gallery-row-full">
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/gallery-19.jpg" alt="During the march 19" />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* After Tab */}
