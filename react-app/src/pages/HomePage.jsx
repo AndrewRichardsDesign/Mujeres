@@ -63,7 +63,11 @@ export default function HomePage() {
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
-  const activists = [1, 2];
+  const activists = [
+    { id: 1, photo: '/images/Andrea & Andrew.jpg' },
+    { id: 2, photo: '/images/Caro.jpg' },
+    { id: 3, photo: '/images/Andrea & Andrew.jpg' },
+  ];
 
   return (
     <>
@@ -216,13 +220,13 @@ export default function HomePage() {
             <div className={`march-tab-panel${activistsTab === 'activists' ? ' active' : ''}`}>
               <p className="section-body activists-intro">{t('activists.intro')}</p>
               <div className="activists-list">
-                {activists.map((i) => (
-                  <div key={i} className="activist-row">
+                {activists.map(({ id, photo }) => (
+                  <div key={id} className="activist-row">
                     <div className="activist-photo">
-                      <div className="march-gallery-placeholder" />
+                      <img className="gallery-img" src={photo} alt={t(`activists.bio${id}`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <div className="activist-info">
-                      <p className="activist-bio">{t(`activists.bio${i}`)}</p>
+                      <p className="activist-bio">{t(`activists.bio${id}`)}</p>
                     </div>
                   </div>
                 ))}
