@@ -813,6 +813,9 @@ body {
     max-width: 250px;
     margin-top: 4px;
 }
+.artivismo-mini-player .audio-player {
+    padding-left: 0;
+}
 /* ============================================
    Tabs Section (march.html)
    ============================================ */
