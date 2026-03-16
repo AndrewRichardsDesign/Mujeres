@@ -88,15 +88,6 @@ body {
     100% { transform: translateX(0); }
 }
 
-.hero-video {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    z-index: 1;
-    display: block;
-    margin-top: 24px;
-    pointer-events: none;
-}
 .hero-content {
     position: relative;
     z-index: 2;
