@@ -57,35 +57,31 @@ body {
 }
 .marching-track {
     display: flex;
-    gap: 32px;
+    align-items: flex-end;
+    gap: 60px;
     width: max-content;
 }
 .marching-row-left .marching-track {
-    animation: marchLeft 18s linear infinite;
-}
-.marching-row-right .marching-track {
-    animation: marchRight 22s linear infinite;
+    animation: marchLeft 16s linear infinite;
 }
 .march-figure {
-    width: 40px;
-    height: 80px;
-    color: rgba(255, 255, 255, 0.25);
+    height: 120px;
+    width: auto;
     flex-shrink: 0;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.2));
+    animation: peepBob 0.55s ease-in-out infinite alternate;
 }
-.marching-row-right .march-figure {
-    color: rgba(255, 255, 255, 0.15);
-    width: 32px;
-    height: 64px;
-    transform: scaleX(-1);
-}
+.march-figure:nth-child(4n+1) { animation-delay: 0s; }
+.march-figure:nth-child(4n+2) { animation-delay: 0.14s; }
+.march-figure:nth-child(4n+3) { animation-delay: 0.28s; }
+.march-figure:nth-child(4n)   { animation-delay: 0.42s; }
 @keyframes marchLeft {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-33.333%); }
 }
-@keyframes marchRight {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+@keyframes peepBob {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-5px); }
 }
 
 .hero-content {
