@@ -34,6 +34,7 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = useState('participate');
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [activistsTab, setActivistsTab] = useState('activists');
+  const [bioModalOpen, setBioModalOpen] = useState(null);
 
   const navigate = useCallback((id) => {
     setActiveSection(id);
@@ -56,9 +57,11 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, name: 'Andrea', photo: '/images/AndreaCollab.jpg' },
-    { id: 2, name: 'Caro', photo: '/images/Caro.jpg' },
-    { id: 3, name: 'Andrew', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 1, name: 'Andrea - Ecuador', photo: '/images/AndreaCollab.jpg' },
+    { id: 2, name: 'Caro - Germany', photo: '/images/Caro.jpg' },
+    { id: 3, name: 'Andrew - United States', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 4, name: 'Ana Gabriela Gutiérrez Martínez - México', photo: '/images/ANA Gabriela.jpeg' },
+    { id: 5, name: 'Monica Castillo - Ecuador', photo: '/images/MONICA.jpeg' },
   ];
 
   return (
@@ -137,9 +140,26 @@ export default function HomePage() {
                   </div>
                   <h4 className="activist-name">{name}</h4>
                   <p className="collaborator-description">{t(`activists.bio${id}`)}</p>
+                  <button className="collaborator-read-more" onClick={() => setBioModalOpen(id)}>
+                    {t('collaborators.readMore')}
+                  </button>
                 </div>
               ))}
             </div>
+            {bioModalOpen !== null && (
+              <div className="bio-modal">
+                <div className="bio-modal-overlay" onClick={() => setBioModalOpen(null)} />
+                <div className="bio-modal-content">
+                  <button className="contact-modal-close" onClick={() => setBioModalOpen(null)}>&times;</button>
+                  <h3 className="bio-modal-title">
+                    {activists.find(a => a.id === bioModalOpen)?.name}
+                  </h3>
+                  <div className="bio-modal-body">
+                    {t(`activists.bio${bioModalOpen}`)}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
