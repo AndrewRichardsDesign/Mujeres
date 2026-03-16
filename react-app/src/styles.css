@@ -42,15 +42,52 @@ body {
         radial-gradient(circle at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 70%);
     pointer-events: none;
 }
-.hero-video {
+/* Marching Figures Animation */
+.marching-figures-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
     z-index: 1;
-    display: block;
-    margin-top: 24px;
-    pointer-events: none;
+    overflow: hidden;
+    margin-top: 20px;
 }
+.marching-row {
+    width: 100%;
+    overflow: hidden;
+    padding: 4px 0;
+}
+.marching-track {
+    display: flex;
+    gap: 32px;
+    width: max-content;
+}
+.marching-row-left .marching-track {
+    animation: marchLeft 18s linear infinite;
+}
+.marching-row-right .marching-track {
+    animation: marchRight 22s linear infinite;
+}
+.march-figure {
+    width: 40px;
+    height: 80px;
+    color: rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+.marching-row-right .march-figure {
+    color: rgba(255, 255, 255, 0.15);
+    width: 32px;
+    height: 64px;
+    transform: scaleX(-1);
+}
+@keyframes marchLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@keyframes marchRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
