@@ -199,16 +199,18 @@ export default function HomePage() {
         >
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('activists.title')}</h2>
-            <div className="march-detail-tabs" style={{ marginBottom: '24px' }}>
-              {['activists', 'artivismo'].map((tab) => (
-                <button
-                  key={tab}
-                  className={`march-tab-btn${activistsTab === tab ? ' active' : ''}`}
-                  onClick={() => setActivistsTab(tab)}
-                >
-                  {t(`activists.tab.${tab}`)}
-                </button>
-              ))}
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
+              <div className="march-detail-tabs">
+                {['activists', 'artivismo'].map((tab) => (
+                  <button
+                    key={tab}
+                    className={`march-tab-btn${activistsTab === tab ? ' active' : ''}`}
+                    onClick={() => setActivistsTab(tab)}
+                  >
+                    {t(`activists.tab.${tab}`)}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className={`march-tab-panel${activistsTab === 'activists' ? ' active' : ''}`}>
