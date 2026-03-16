@@ -192,16 +192,22 @@ export default function HomePage() {
             <div className={`march-tab-panel${activistsTab === 'activists' ? ' active' : ''}`}>
               <p className="section-body activists-intro">{t('activists.intro')}</p>
               <div className="activists-list">
-                {activists.map(({ id, photo }) => (
-                  <div key={id} className="activist-row">
-                    <div className="activist-photo">
-                      <img className="gallery-img" src={photo} alt={t(`activists.bio${id}`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <div className="activist-info">
-                      <p className="activist-bio">{t(`activists.bio${id}`)}</p>
-                    </div>
+                <div className="activist-row">
+                  <div className="activist-photo">
+                    <img className="gallery-img" src="/images/Mel Pacheco.jpg" alt="Mel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
-                ))}
+                  <div className="activist-info">
+                    <p className="activist-bio">{t('activists.bio.mel')}</p>
+                  </div>
+                </div>
+                <div className="activist-row">
+                  <div className="activist-photo">
+                    <img className="gallery-img" src="/images/Andrea (1).jpg" alt="Andrea" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <div className="activist-info">
+                    <p className="activist-bio">{t('activists.bio.andrea')}</p>
+                  </div>
+                </div>
               </div>
             </div>
 
