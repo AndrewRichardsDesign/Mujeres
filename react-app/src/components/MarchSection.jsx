@@ -9,6 +9,7 @@ export default function MarchSection({ isActive }) {
   const [detailView, setDetailView] = useState(false);
   const [detailTab, setDetailTab] = useState('before');
   const [detailYear, setDetailYear] = useState('2026');
+  const [detailLocation, setDetailLocation] = useState('mexico');
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
 
@@ -84,6 +85,10 @@ export default function MarchSection({ isActive }) {
         { type: 'video', src: '/videos/9-3.mp4' },
       ]
     },
+    { img: '/images/march/10.jpg', alt: 'Refugio', desc: 'march.during.desc10', testimony: 'march.during.testimony10', audioId: 'march-audio-10', audioSrc: '/audio/10.mp3' },
+    { img: '/images/march/11.jpg', alt: 'German Visitors', desc: 'march.during.desc11', testimony: 'march.during.testimony11', audioId: 'march-audio-11', audioSrc: '/audio/11.mp3' },
+    { img: '/images/march/12.jpg', alt: 'Valeria', desc: 'march.during.desc12', testimony: 'march.during.testimony12', audioId: 'march-audio-12', audioSrc: '/audio/12.mp3' },
+    { img: '/images/march/13.jpg', alt: 'Sinthia', desc: 'march.during.desc13', testimony: 'march.during.testimony13', audioId: 'march-audio-13', audioSrc: '/audio/13.mp3' },
   ];
 
   return (
@@ -120,7 +125,7 @@ export default function MarchSection({ isActive }) {
             </div>
             <p className="march-pin-modal-theme">{t('march.modal.theme')}</p>
             <div className="march-pin-modal-image">
-              <div className="march-gallery-placeholder" />
+              <img src="/images/MapPin_MexicoCity.jpg" alt="Mexico City March" />
             </div>
             <p className="march-pin-modal-participants">{t('march.modal.participants')}</p>
             <div className="march-pin-modal-causes">
@@ -144,7 +149,9 @@ export default function MarchSection({ isActive }) {
       {/* Detail View */}
       {detailView && (
         <div id="march-detail-view">
-          <h3 className="march-location-title">Mexico {detailYear}</h3>
+          <h3 className="march-location-title">
+            {detailLocation === 'mexico' ? 'Mexico' : 'Quito'} {detailYear}
+          </h3>
           <div className="march-detail-header">
             <button className="march-back-btn" onClick={hideDetail}>
               {t('march.back')}
@@ -161,8 +168,13 @@ export default function MarchSection({ isActive }) {
               ))}
             </div>
             <div className="march-detail-filters">
-              <select className="year-dropdown" defaultValue="mexico">
+              <select
+                className="year-dropdown"
+                value={detailLocation}
+                onChange={(e) => setDetailLocation(e.target.value)}
+              >
                 <option value="mexico">Mexico</option>
+                <option value="quito">Quito</option>
               </select>
               <select
                 className="year-dropdown"
