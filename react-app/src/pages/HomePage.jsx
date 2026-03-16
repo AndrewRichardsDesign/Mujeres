@@ -6,13 +6,6 @@ import PhotoCard from '../components/PhotoCard';
 import MarchSection from '../components/MarchSection';
 import AudioPlayer from '../components/AudioPlayer';
 
-const CollaboratorSvg = () => (
-  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="40" cy="30" r="14" fill="currentColor" />
-    <ellipse cx="40" cy="62" rx="22" ry="14" fill="currentColor" />
-  </svg>
-);
-
 function ContactModal({ onClose }) {
   const { t } = useLanguage();
   return (
@@ -39,7 +32,6 @@ function ContactModal({ onClose }) {
 export default function HomePage() {
   const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState('participate');
-  const [collabModalOpen, setCollabModalOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [activistsTab, setActivistsTab] = useState('activists');
 
@@ -138,35 +130,15 @@ export default function HomePage() {
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('collaborators.title')}</h2>
             <div className="collaborators-grid">
-              {Array.from({ length: 10 }, (_, i) => (
-                <div key={i} className="collaborator-card" onClick={() => setCollabModalOpen(true)}>
+              {activists.map(({ id, photo }) => (
+                <div key={id} className="collaborator-card">
                   <div className="collaborator-photo">
-                    <div className="collaborator-placeholder">
-                      <CollaboratorSvg />
-                    </div>
+                    <img className="gallery-img" src={photo} alt={t(`activists.bio${id}`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
-                  <p className="collaborator-description">{t('collaborators.description')}</p>
+                  <p className="collaborator-description">{t(`activists.bio${id}`)}</p>
                 </div>
               ))}
             </div>
-
-            {collabModalOpen && (
-              <div className="collaborator-modal" style={{ display: 'flex' }}>
-                <div
-                  className="collaborator-modal-overlay"
-                  onClick={() => setCollabModalOpen(false)}
-                />
-                <div className="collaborator-modal-content">
-                  <button
-                    className="collaborator-modal-close"
-                    onClick={() => setCollabModalOpen(false)}
-                  >
-                    &times;
-                  </button>
-                  <p className="collaborator-modal-text">{t('collaborators.modal.text')}</p>
-                </div>
-              </div>
-            )}
           </div>
         </section>
 
