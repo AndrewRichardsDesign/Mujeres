@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import PhotoCard from '../components/PhotoCard';
 import MarchSection from '../components/MarchSection';
 import AudioPlayer from '../components/AudioPlayer';
-import MarchingFigures from '../components/MarchingFigures';
 
 function ContactModal({ onClose }) {
   const { t } = useLanguage();
@@ -57,7 +56,7 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, name: 'Andrea', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 1, name: 'Andrea', photo: '/images/AndreaCollab.jpg' },
     { id: 2, name: 'Caro', photo: '/images/Caro.jpg' },
     { id: 3, name: 'Andrew', photo: '/images/Andrea & Andrew.jpg' },
   ];
@@ -79,7 +78,6 @@ export default function HomePage() {
             {t('hero.cta')}
           </a>
         </div>
-        <MarchingFigures />
       </section>
 
       {/* Contact Modal */}
@@ -160,6 +158,7 @@ export default function HomePage() {
         >
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('sheets.title')}</h2>
+            <p className="section-body" style={{ maxWidth: '75%', margin: '0 auto 32px' }}>{t('sheets.description')}</p>
             <div className="march-photo-gallery">
               <div className="gallery-row gallery-row-full">
                 <div className="gallery-item">
@@ -167,7 +166,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <p className="section-body" style={{ maxWidth: '50%', marginTop: '24px' }}>{t('sheets.description')}</p>
           </div>
         </section>
 
