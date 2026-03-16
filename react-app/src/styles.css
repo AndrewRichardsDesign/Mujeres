@@ -809,15 +809,9 @@ body {
     color: #4b5563;
     margin-bottom: 12px;
 }
-.activist-link {
-    font-size: 14px;
-    font-weight: 600;
-    color: #1a1a2e;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-.activist-link:hover {
-    color: #5150f7;
+.artivismo-mini-player {
+    max-width: 250px;
+    margin-top: 4px;
 }
 /* ============================================
    Tabs Section (march.html)
