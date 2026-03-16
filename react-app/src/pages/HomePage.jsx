@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import PhotoCard from '../components/PhotoCard';
 import MarchSection from '../components/MarchSection';
 import AudioPlayer from '../components/AudioPlayer';
-import MarchingFigures from '../components/MarchingFigures';
 
 function ContactModal({ onClose }) {
   const { t } = useLanguage();
@@ -79,7 +78,6 @@ export default function HomePage() {
             {t('hero.cta')}
           </a>
         </div>
-        <MarchingFigures />
       </section>
 
       {/* Contact Modal */}
