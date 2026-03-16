@@ -158,6 +158,7 @@ export default function HomePage() {
         >
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('sheets.title')}</h2>
+            <p className="section-body" style={{ maxWidth: '720px', margin: '0 auto 32px' }}>{t('sheets.description')}</p>
             <div className="march-photo-gallery">
               <div className="gallery-row gallery-row-full">
                 <div className="gallery-item">
@@ -165,7 +166,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <p className="section-body" style={{ maxWidth: '50%', marginTop: '24px' }}>{t('sheets.description')}</p>
           </div>
         </section>
 
