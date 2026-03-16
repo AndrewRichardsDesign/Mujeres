@@ -56,9 +56,9 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, photo: '/images/Andrea & Andrew.jpg' },
-    { id: 2, photo: '/images/Caro.jpg' },
-    { id: 3, photo: '/images/Andrea & Andrew.jpg' },
+    { id: 1, name: 'Andrea', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 2, name: 'Caro', photo: '/images/Caro.jpg' },
+    { id: 3, name: 'Andrew', photo: '/images/Andrea & Andrew.jpg' },
   ];
 
   return (
@@ -130,11 +130,12 @@ export default function HomePage() {
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('collaborators.title')}</h2>
             <div className="collaborators-grid">
-              {activists.map(({ id, photo }) => (
+              {activists.map(({ id, name, photo }) => (
                 <div key={id} className="collaborator-card">
                   <div className="collaborator-photo">
-                    <img className="gallery-img" src={photo} alt={t(`activists.bio${id}`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img className="gallery-img" src={photo} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
+                  <h4 className="activist-name">{name}</h4>
                   <p className="collaborator-description">{t(`activists.bio${id}`)}</p>
                 </div>
               ))}
