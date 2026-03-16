@@ -25,11 +25,12 @@ body {
     position: relative;
     min-height: 50vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #5150f7 0%, #7b68ee 40%, #9b59b6 100%);
     overflow: hidden;
-    padding: 60px 40px;
+    padding: 60px 40px 0;
     text-align: center;
 }
 .hero-overlay {
@@ -39,6 +40,15 @@ body {
         radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(0,0,0,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+.hero-video {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    z-index: 1;
+    display: block;
+    margin-top: 24px;
     pointer-events: none;
 }
 .hero-content {

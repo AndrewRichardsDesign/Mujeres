@@ -78,6 +78,14 @@ export default function HomePage() {
             {t('hero.cta')}
           </a>
         </div>
+        <video
+          className="hero-video"
+          src="/images/grok-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </section>
 
       {/* Contact Modal */}
