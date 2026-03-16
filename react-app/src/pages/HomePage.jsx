@@ -56,7 +56,7 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, name: 'Andrea', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 1, name: 'Andrea', photo: '/images/AndreaCollab.jpg' },
     { id: 2, name: 'Caro', photo: '/images/Caro.jpg' },
     { id: 3, name: 'Andrew', photo: '/images/Andrea & Andrew.jpg' },
   ];
