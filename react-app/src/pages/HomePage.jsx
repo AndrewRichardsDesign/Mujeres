@@ -198,6 +198,9 @@ export default function HomePage() {
                   </div>
                   <div className="activist-info">
                     <p className="activist-bio">{t('activists.bio.mel')}</p>
+                    <div className="artivismo-mini-player">
+                      <AudioPlayer audioId="mel-pacheco" src="/audio/Mel Pacheco.m4a" />
+                    </div>
                   </div>
                 </div>
                 <div className="activist-row">
@@ -206,6 +209,9 @@ export default function HomePage() {
                   </div>
                   <div className="activist-info">
                     <p className="activist-bio">{t('activists.bio.andrea')}</p>
+                    <div className="artivismo-mini-player">
+                      <AudioPlayer audioId="andrea-ella-mexico" src="/audio/Andrea de Ella Mexico.m4a" />
+                    </div>
                   </div>
                 </div>
               </div>

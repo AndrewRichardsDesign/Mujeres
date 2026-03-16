@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import AudioPlayer from './AudioPlayer';
+import CombinedAudioPlayer from './CombinedAudioPlayer';
 import MediaCarousel from './MediaCarousel';
 
 export default function PhotoCard({ imgSrc, altText, descKey, testimonyKey, audioId, audioSrc, audioId2, audioSrc2, carouselMedia }) {
@@ -22,10 +23,7 @@ export default function PhotoCard({ imgSrc, altText, descKey, testimonyKey, audi
           </div>
           <p className="photo-description">{t(descKey)}</p>
           {audioId2 ? (
-            <div className="audio-players-inline">
-              <AudioPlayer audioId={audioId} src={audioSrc} />
-              <AudioPlayer audioId={audioId2} src={audioSrc2} />
-            </div>
+            <CombinedAudioPlayer audioId={audioId} src1={audioSrc} src2={audioSrc2} />
           ) : (
             <AudioPlayer audioId={audioId} src={audioSrc} />
           )}
