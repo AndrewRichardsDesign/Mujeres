@@ -277,7 +277,8 @@ export default function MarchSection({ isActive }) {
                 <img className="gallery-img" src="/images/newspaper.jpg" alt="Newspaper coverage of the march" />
               </div>
               <div className="after-text-column">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>El diario mexicano La Jornada documentó la magnitud de la movilización del 8 de marzo en CDMX bajo el titular "Mujeres exigen justicia y fin de la violencia". Según el reporte, alrededor de 120 mil personas participaron en la marcha, sumándose a las protestas globales del Día Internacional de la Mujer. La cobertura destacó las principales demandas del movimiento: el fin de los feminicidios, las desapariciones, la violencia sexual, la trata, así como la denuncia de la impunidad y la desigualdad estructural.</p>
+                <p>El periódico también subrayó que niñxs y adolescentes se encuentran entre las principales víctimas de agresiones sexuales, y registró la diversidad de voces presentes en la movilización, desde colectivas feministas hasta mujeres indígenas y familias de víctimas. Las imágenes publicadas muestran la fuerza simbólica y emocional de la jornada, con calles teñidas de morado y miles de participantes exigiendo justicia, seguridad y respeto a sus derechos. La nota sitúa la protesta dentro de un contexto nacional e internacional de creciente exigencia social frente a la violencia de género.</p>
               </div>
             </div>
           </div>
