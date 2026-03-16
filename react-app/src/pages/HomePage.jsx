@@ -197,6 +197,7 @@ export default function HomePage() {
                     <img className="gallery-img" src="/images/Mel Pacheco.jpg" alt="Mel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="activist-info">
+                    <h4 className="activist-name">Mel Pacheco</h4>
                     <p className="activist-bio">{t('activists.bio.mel')}</p>
                     <div className="artivismo-mini-player">
                       <AudioPlayer audioId="mel-pacheco" src="/audio/Mel Pacheco.m4a" />
@@ -208,6 +209,7 @@ export default function HomePage() {
                     <img className="gallery-img" src="/images/Andrea (1).jpg" alt="Andrea" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="activist-info">
+                    <h4 className="activist-name">Andrea Rioseco Sanjuán</h4>
                     <p className="activist-bio">{t('activists.bio.andrea')}</p>
                     <div className="artivismo-mini-player">
                       <AudioPlayer audioId="andrea-ella-mexico" src="/audio/Andrea de Ella Mexico.m4a" />
@@ -224,7 +226,8 @@ export default function HomePage() {
                     <img className="gallery-img" src="/images/artivismo-19.jpg" alt={t('activists.artivismo.desc19')} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="activist-info">
-                    <p className="activist-bio">{t('activists.artivismo.desc19')}</p>
+                    <h4 className="activist-name">{t('activists.artivismo.name19')}</h4>
+                    <p className="activist-bio">{t('activists.artivismo.bio19')}</p>
                     <div className="artivismo-mini-player">
                       <AudioPlayer audioId="artivismo-19" src="/audio/artivismo-19.mp3" />
                     </div>

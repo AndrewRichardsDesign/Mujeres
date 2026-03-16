@@ -744,6 +744,12 @@ body {
 .activist-info {
     flex: 1;
 }
+.activist-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+}
 .activist-bio {
     font-size: 15px;
     line-height: 1.7;
