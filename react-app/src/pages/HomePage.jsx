@@ -188,6 +188,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+            <p className="section-body">{t('sheets.description')}</p>
           </div>
         </section>
 
