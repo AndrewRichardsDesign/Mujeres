@@ -79,13 +79,13 @@ export default function MarchSection({ isActive }) {
     { img: '/images/march/3.jpg', alt: 'Angeles', desc: 'march.during.desc3', testimony: 'march.during.testimony3', audioId: 'march-audio-3', audioSrc: '/audio/3.m4a', audioId2: 'march-audio-3-1', audioSrc2: '/audio/3.1.m4a' },
     { img: '/images/march/4.jpg', alt: 'Valeria', desc: 'march.during.desc4', testimony: 'march.during.testimony4', audioId: 'march-audio-4', audioSrc: '/audio/4.m4a' },
     { img: '/images/march/5.jpg', alt: 'Brenda', desc: 'march.during.desc5', testimony: 'march.during.testimony5', audioId: 'march-audio-5', audioSrc: '/audio/5.m4a' },
-    { img: '/images/march/6.jpg', alt: 'Kim & Carolina', desc: 'march.during.desc6', testimony: 'march.during.testimony6', audioId: 'march-audio-6', audioSrc: '/audio/6.m4a' },
+    { img: '/images/march/6.jpg', alt: 'Kimberly, Carolina, and Melissa', desc: 'march.during.desc6', testimony: 'march.during.testimony6', audioId: 'march-audio-6', audioSrc: '/audio/6.m4a' },
     { img: '/images/march/7.jpg', alt: 'Monserrat', desc: 'march.during.desc7', testimony: 'march.during.testimony7', audioId: 'march-audio-7', audioSrc: '/audio/7.m4a' },
     { img: '/images/march/8.jpg', alt: 'Esotérica', desc: 'march.during.desc8', testimony: 'march.during.testimony8', audioId: 'march-audio-8', audioSrc: '/audio/8.m4a' },
     {
-      alt: 'Denunciar a su violador', desc: 'march.during.desc9', testimony: 'march.during.testimony9', audioId: 'march-audio-9', audioSrc: '/audio/9.m4a',
+      alt: 'Monserrat', desc: 'march.during.desc9', testimony: 'march.during.testimony9', audioId: 'march-audio-9', audioSrc: '/audio/9.m4a',
       carouselMedia: [
-        { type: 'image', src: '/images/march/9.jpg', alt: 'Denunciar a su violador' },
+        { type: 'image', src: '/images/march/9.jpg', alt: 'Monserrat' },
         { type: 'video', src: '/videos/9-2.mp4' },
         { type: 'video', src: '/videos/9-3.mp4' },
       ]
@@ -93,7 +93,7 @@ export default function MarchSection({ isActive }) {
     { img: '/images/march/10.jpg', alt: 'Refugio', desc: 'march.during.desc10', testimony: 'march.during.testimony10', audioId: 'march-audio-10', audioSrc: '/audio/10.mp3' },
     { img: '/images/march/11.jpg', alt: 'German Visitors', desc: 'march.during.desc11', testimony: 'march.during.testimony11', audioId: 'march-audio-11', audioSrc: '/audio/11.mp3' },
     { img: '/images/march/12.jpg', alt: 'Valeria', desc: 'march.during.desc12', testimony: 'march.during.testimony12', audioId: 'march-audio-12', audioSrc: '/audio/12.mp3' },
-    { img: '/images/march/13.jpg', alt: 'Sinthia', desc: 'march.during.desc13', testimony: 'march.during.testimony13', audioId: 'march-audio-13', audioSrc: '/audio/13.mp3' },
+    { img: '/images/march/13.jpg', alt: 'Cinthia', desc: 'march.during.desc13', testimony: 'march.during.testimony13', audioId: 'march-audio-13', audioSrc: '/audio/13.mp3' },
   ];
 
   return (
