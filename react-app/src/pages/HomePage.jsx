@@ -4,6 +4,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import Navigation from '../components/Navigation';
 import PhotoCard from '../components/PhotoCard';
 import MarchSection from '../components/MarchSection';
+import AudioPlayer from '../components/AudioPlayer';
 
 const CollaboratorSvg = () => (
   <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +41,7 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = useState('participate');
   const [collabModalOpen, setCollabModalOpen] = useState(false);
   const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [activistsTab, setActivistsTab] = useState('activists');
 
   const navigate = useCallback((id) => {
     setActiveSection(id);
@@ -196,19 +198,43 @@ export default function HomePage() {
         >
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('activists.title')}</h2>
-            <p className="section-body activists-intro">{t('activists.intro')}</p>
-            <div className="activists-list">
-              {activists.map((i) => (
-                <div key={i} className="activist-row">
-                  <div className="activist-photo">
-                    <div className="march-gallery-placeholder" />
-                  </div>
-                  <div className="activist-info">
-                    <p className="activist-bio">{t(`activists.bio${i}`)}</p>
-                    <a href="#" className="activist-link">{t('activists.learn')}</a>
-                  </div>
-                </div>
+            <div className="march-detail-tabs" style={{ marginBottom: '24px' }}>
+              {['activists', 'artivismo'].map((tab) => (
+                <button
+                  key={tab}
+                  className={`march-tab-btn${activistsTab === tab ? ' active' : ''}`}
+                  onClick={() => setActivistsTab(tab)}
+                >
+                  {t(`activists.tab.${tab}`)}
+                </button>
               ))}
+            </div>
+
+            <div className={`march-tab-panel${activistsTab === 'activists' ? ' active' : ''}`}>
+              <p className="section-body activists-intro">{t('activists.intro')}</p>
+              <div className="activists-list">
+                {activists.map((i) => (
+                  <div key={i} className="activist-row">
+                    <div className="activist-photo">
+                      <div className="march-gallery-placeholder" />
+                    </div>
+                    <div className="activist-info">
+                      <p className="activist-bio">{t(`activists.bio${i}`)}</p>
+                      <a href="#" className="activist-link">{t('activists.learn')}</a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className={`march-tab-panel${activistsTab === 'artivismo' ? ' active' : ''}`}>
+              <div className="artivismo-card">
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/artivismo-19.jpg" alt={t('activists.artivismo.desc19')} />
+                </div>
+                <p className="artivismo-caption">{t('activists.artivismo.desc19')}</p>
+                <AudioPlayer audioId="artivismo-19" src="/audio/artivismo-19.mp3" />
+              </div>
             </div>
           </div>
         </section>
