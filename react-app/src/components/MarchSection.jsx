@@ -94,6 +94,7 @@ export default function MarchSection({ isActive }) {
     { img: '/images/march/11.jpg', alt: 'German Visitors', desc: 'march.during.desc11', testimony: 'march.during.testimony11', audioId: 'march-audio-11', audioSrc: '/audio/11.m4a' },
 
     { img: '/images/march/13.jpg', alt: 'Cinthia', desc: 'march.during.desc13', testimony: 'march.during.testimony13', audioId: 'march-audio-13', audioSrc: '/audio/13.m4a' },
+    { img: '/images/march/15.jpg', alt: 'Verónica', desc: 'march.during.desc15', testimony: 'march.during.testimony15', audioId: 'march-audio-15', audioSrc: '/audio/15.m4a' },
   ];
 
   return (
