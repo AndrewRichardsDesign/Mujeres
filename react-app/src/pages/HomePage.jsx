@@ -188,7 +188,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <p className="section-body">{t('sheets.description')}</p>
+            <p className="section-body" style={{ maxWidth: '50%', marginTop: '24px' }}>{t('sheets.description')}</p>
           </div>
         </section>
 
