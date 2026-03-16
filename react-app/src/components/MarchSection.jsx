@@ -94,6 +94,7 @@ export default function MarchSection({ isActive }) {
     { img: '/images/march/11.jpg', alt: 'German Visitors', desc: 'march.during.desc11', testimony: 'march.during.testimony11', audioId: 'march-audio-11', audioSrc: '/audio/11.m4a' },
 
     { img: '/images/march/13.jpg', alt: 'Cinthia', desc: 'march.during.desc13', testimony: 'march.during.testimony13', audioId: 'march-audio-13', audioSrc: '/audio/13.m4a' },
+    { img: '/images/march/14.jpg', alt: 'Ana', desc: 'march.during.desc14', testimony: 'march.during.testimony14', audioId: 'march-audio-14', audioSrc: '/audio/14.m4a' },
     { img: '/images/march/15.jpg', alt: 'Verónica', desc: 'march.during.desc15', testimony: 'march.during.testimony15', audioId: 'march-audio-15', audioSrc: '/audio/15.m4a' },
   ];
 
@@ -282,16 +283,13 @@ export default function MarchSection({ isActive }) {
                   ))}
                 </div>
                 <div className="march-photo-gallery">
-                  {/* Row 1: three equal */}
+                  {/* Row 1: two equal */}
                   <div className="gallery-row gallery-row-3">
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/Cape.jpg" alt="Woman wearing feminist cape during the march" />
                     </div>
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/gallery-14.jpg" alt="During the march 14" />
-                    </div>
-                    <div className="gallery-item">
-                      <img className="gallery-img" src="/images/gallery-15.jpg" alt="During the march 15" />
                     </div>
                   </div>
                   {/* Row 2: two equal */}
