@@ -12,10 +12,34 @@ const CollaboratorSvg = () => (
   </svg>
 );
 
+function ContactModal({ onClose }) {
+  const { t } = useLanguage();
+  return (
+    <div className="contact-modal">
+      <div className="contact-modal-overlay" onClick={onClose} />
+      <div className="contact-modal-content">
+        <button className="contact-modal-close" onClick={onClose}>&times;</button>
+        <h2 className="contact-modal-title">{t('contact.title')}</h2>
+        <div className="contact-modal-info">
+          <div className="contact-modal-item">
+            <span className="contact-modal-icon">&#9993;</span>
+            <a href="mailto:VocesDel8M@gmail.com">VocesDel8M@gmail.com</a>
+          </div>
+          <div className="contact-modal-item">
+            <span className="contact-modal-icon">&#9742;</span>
+            <a href="tel:+19086354081">+1 908-635-4081</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState('participate');
   const [collabModalOpen, setCollabModalOpen] = useState(false);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
 
   const navigate = useCallback((id) => {
     setActiveSection(id);
@@ -49,33 +73,54 @@ export default function HomePage() {
           <h1>{t('hero.title')}</h1>
           <p className="hero-subtitle">{t('hero.subtitle')}</p>
           <a
-            href="#participate"
+            href="#"
             className="hero-cta"
-            onClick={(e) => { e.preventDefault(); navigate('participate'); }}
+            onClick={(e) => { e.preventDefault(); setContactModalOpen(true); }}
           >
             {t('hero.cta')}
           </a>
         </div>
       </section>
 
+      {/* Contact Modal */}
+      {contactModalOpen && <ContactModal onClose={() => setContactModalOpen(false)} />}
+
       {/* Navigation */}
       <Navigation activeSection={activeSection} onNavigate={navigate} />
 
       {/* Page Content */}
       <main className="page-content">
-        {/* Participate Section */}
+        {/* About Us / Participate Section */}
         <section
           id="participate"
           className={`content-section${activeSection === 'participate' ? ' active' : ''}`}
         >
           <div className="content-container">
             <h2 className="section-title">{t('participate.title')}</h2>
-            <p className="section-body">{t('participate.body')}</p>
-            <div className="contact-block">
-              <p className="contact-intro">{t('participate.contact')}</p>
-              <p className="contact-item">VocesDel8M@gmail.com</p>
-              <p className="contact-item">+1 908-635-4081</p>
+            <p className="section-body">{t('about.intro')}</p>
+            <p className="section-body">{t('about.marches')}</p>
+            <p className="about-mission">{t('about.mission')}</p>
+            <p className="section-body">{t('about.method')}</p>
+            <p className="about-highlight">{t('about.power')}</p>
+            <p className="section-body">{t('about.platform')}</p>
+            <p className="section-body">{t('about.principles')}</p>
+            <div className="about-principles">
+              <div className="about-principle">
+                <h3>{t('about.principle1.title')}</h3>
+                <p>{t('about.principle1.text')}</p>
+              </div>
+              <div className="about-principle">
+                <h3>{t('about.principle2.title')}</h3>
+                <p>{t('about.principle2.text')}</p>
+              </div>
+              <div className="about-principle">
+                <h3>{t('about.principle3.title')}</h3>
+                <p>{t('about.principle3.text')}</p>
+              </div>
             </div>
+            <p className="section-body">{t('about.everyone')}</p>
+            <p className="section-body">{t('about.closing')}</p>
+            <p className="about-tagline">{t('about.tagline')}</p>
           </div>
         </section>
 
@@ -87,7 +132,7 @@ export default function HomePage() {
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('collaborators.title')}</h2>
             <div className="collaborators-grid">
-              {Array.from({ length: 7 }, (_, i) => (
+              {Array.from({ length: 10 }, (_, i) => (
                 <div key={i} className="collaborator-card" onClick={() => setCollabModalOpen(true)}>
                   <div className="collaborator-photo">
                     <div className="collaborator-placeholder">
