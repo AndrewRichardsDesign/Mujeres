@@ -179,14 +179,12 @@ export default function HomePage() {
         >
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('sheets.title')}</h2>
-            <div className="march-gallery">
-              <div className="march-gallery-item march-gallery-large">
-                <div className="march-gallery-placeholder" />
+            <div className="march-photo-gallery">
+              <div className="gallery-row gallery-row-full">
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/cobija.jpg" alt="La Cobija" />
+                </div>
               </div>
-              <div className="march-gallery-item"><div className="march-gallery-placeholder" /></div>
-              <div className="march-gallery-item"><div className="march-gallery-placeholder" /></div>
-              <div className="march-gallery-item"><div className="march-gallery-placeholder" /></div>
-              <div className="march-gallery-item"><div className="march-gallery-placeholder" /></div>
             </div>
           </div>
         </section>
