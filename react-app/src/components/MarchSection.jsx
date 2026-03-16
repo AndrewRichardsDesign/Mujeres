@@ -201,6 +201,19 @@ export default function MarchSection({ isActive }) {
                 />
               ))}
             </div>
+            <div className="march-photo-gallery">
+              <div className="gallery-row gallery-row-3">
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/before-paper1.jpg" alt="Before the march 1" />
+                </div>
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/before-paper2.jpg" alt="Before the march 2" />
+                </div>
+                <div className="gallery-item">
+                  <img className="gallery-img" src="/images/before-paper3.jpg" alt="Before the march 3" />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* During Tab */}
