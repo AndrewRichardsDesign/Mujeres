@@ -1014,6 +1014,11 @@ body {
     align-items: center;
     gap: 10px;
 }
+.combined-progress-tracks {
+    flex: 1;
+    display: flex;
+    gap: 6px;
+}
 .progress-track {
     flex: 1;
     height: 4px;
