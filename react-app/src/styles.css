@@ -273,13 +273,36 @@ body {
     line-height: 1.6;
     margin-bottom: 24px;
 }
-.donate-kofi-iframe {
-    width: 100%;
-    height: 712px;
-    border: none;
-    border-radius: 12px;
+.donate-stripe-container {
+    margin: 8px 0 16px;
 }
-.donate-kofi-note {
+.donate-stripe-placeholder {
+    padding: 24px;
+    background: #f8f8fc;
+    border-radius: 12px;
+    border: 1px dashed rgba(81, 80, 247, 0.25);
+}
+.donate-stripe-setup {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+.donate-stripe-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #5150f7 0%, #7b68ee 40%, #9b59b6 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 24px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.donate-stripe-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+.donate-stripe-note {
     font-size: 12px;
     color: #999;
     margin-top: 16px;

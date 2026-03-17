@@ -7,25 +7,13 @@ export default function DonatePage() {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+    script.src = 'https://js.stripe.com/v3/buy-button.js';
     script.async = true;
-    script.onload = () => {
-      if (window.kofiWidgetOverlay) {
-        window.kofiWidgetOverlay.draw('vocesdel8m', {
-          'type': 'floating-chat',
-          'floating-chat.donateButton.text': t('donate.formBtn'),
-          'floating-chat.donateButton.background-color': '#5150f7',
-          'floating-chat.donateButton.text-color': '#fff',
-        });
-      }
-    };
-    document.body.appendChild(script);
+    document.head.appendChild(script);
     return () => {
-      document.body.removeChild(script);
-      const frame = document.getElementById('kofi-overlay');
-      if (frame) frame.remove();
+      document.head.removeChild(script);
     };
-  }, [t]);
+  }, []);
 
   return (
     <>
@@ -58,13 +46,34 @@ export default function DonatePage() {
               <div className="donate-form-icon">&#128156;</div>
               <h2 className="donate-form-heading">{t('donate.formTitle')}</h2>
               <p className="donate-form-text">{t('donate.formDesc')}</p>
-              <iframe
-                id="kofiframe"
-                src="https://ko-fi.com/vocesdel8m/?hidefeed=true&widget=true&embed=true&preview=true"
-                title="Ko-fi Donation"
-                className="donate-kofi-iframe"
-              />
-              <p className="donate-kofi-note">{t('donate.kofi')}</p>
+              <div className="donate-stripe-container">
+                {/*
+                  Replace the placeholder below with your Stripe Buy Button.
+                  Steps:
+                  1. Go to Stripe Dashboard → Payment Links
+                  2. Create a new link → "Customers choose what to pay"
+                  3. Click "Buy button" → copy the generated code
+                  4. Paste the <stripe-buy-button> element below
+
+                  Example:
+                  <stripe-buy-button
+                    buy-button-id="buy_btn_XXXXXXXXXXXX"
+                    publishable-key="pk_live_XXXXXXXXXXXX"
+                  />
+                */}
+                <div className="donate-stripe-placeholder">
+                  <p className="donate-stripe-setup">{t('donate.setup')}</p>
+                  <a
+                    href="https://dashboard.stripe.com/payment-links"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="donate-stripe-btn"
+                  >
+                    {t('donate.stripeSetup')}
+                  </a>
+                </div>
+              </div>
+              <p className="donate-stripe-note">{t('donate.stripe')}</p>
             </div>
           </div>
         </div>
