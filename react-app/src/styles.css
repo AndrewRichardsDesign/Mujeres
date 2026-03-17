@@ -829,6 +829,21 @@ body {
     color: #4b5563;
     margin-bottom: 12px;
 }
+.activist-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+.activist-links a {
+    color: #7c3aed;
+    text-decoration: none;
+}
+.activist-links a:hover {
+    text-decoration: underline;
+}
 .artivismo-mini-player {
     max-width: 250px;
     margin-top: 4px;
