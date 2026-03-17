@@ -131,7 +131,20 @@ const translations = {
     "march.html.during.desc14": "Reflections in still water \u2014 seeing ourselves clearly for the first time.",
     "march.html.during.desc15": "Writing letters to future selves, sealing intentions with determination.",
     "march.html.during.desc16": "The final moment together \u2014 gratitude, tears, and the courage to continue.",
-    "play.audio": "Play audio"
+    "play.audio": "Play audio",
+    "nav.donate": "Donate",
+    "donate.title": "Support Our Mission",
+    "donate.intro": "Voces del 8M is a volunteer-run collective storytelling project. We have no paid staff — every person involved donates their time, skills, and passion to amplify the voices of women and allies around the world.",
+    "donate.mission": "Your donation helps us continue documenting stories from marches, communities, and movements across borders. Funds go directly toward travel to marches and events, recording equipment, website hosting, translation work, and community outreach materials.",
+    "donate.impact": "Every contribution — no matter the size — helps us reach more communities, preserve more stories, and ensure that the voices of those fighting for justice and equality are never silenced.",
+    "donate.highlight1": "100% volunteer-run, every dollar goes to the mission",
+    "donate.highlight2": "Stories documented across multiple countries",
+    "donate.highlight3": "Bridging communities worldwide through shared narratives",
+    "donate.thankyou": "Thank you for believing in the power of storytelling and standing with us in this movement. Together, we weave a global archive of memory, resistance, and hope.",
+    "donate.formTitle": "Make a Donation",
+    "donate.formDesc": "Your donation is processed securely through Zeffy — a 100% free platform for nonprofits. No fees are deducted from your contribution.",
+    "donate.formBtn": "Donate via Zeffy",
+    "donate.zeffy": "Powered by Zeffy — 100% free, zero transaction fees"
   },
   es: {
     "lang.spanish": "Espa\u00F1ol",
@@ -265,7 +278,20 @@ const translations = {
     "march.html.during.desc14": "Reflejos en agua quieta \u2014 vi\u00E9ndonos claramente por primera vez.",
     "march.html.during.desc15": "Escribiendo cartas a nuestro yo futuro, sellando intenciones con determinaci\u00F3n.",
     "march.html.during.desc16": "El momento final juntas \u2014 gratitud, l\u00E1grimas y el coraje para continuar.",
-    "play.audio": "Reproducir audio"
+    "play.audio": "Reproducir audio",
+    "nav.donate": "Donar",
+    "donate.title": "Apoya Nuestra Misión",
+    "donate.intro": "Voces del 8M es un proyecto colectivo de narrativa dirigido por voluntarias. No tenemos personal remunerado — cada persona involucrada dona su tiempo, habilidades y pasión para amplificar las voces de mujeres y aliadas en todo el mundo.",
+    "donate.mission": "Tu donación nos ayuda a seguir documentando historias de marchas, comunidades y movimientos a través de fronteras. Los fondos se destinan directamente a viajes a marchas y eventos, equipo de grabación, alojamiento web, trabajo de traducción y materiales de alcance comunitario.",
+    "donate.impact": "Cada contribución — sin importar el monto — nos ayuda a llegar a más comunidades, preservar más historias y asegurar que las voces de quienes luchan por la justicia y la igualdad nunca sean silenciadas.",
+    "donate.highlight1": "100% dirigido por voluntarias, cada dólar va a la misión",
+    "donate.highlight2": "Historias documentadas en múltiples países",
+    "donate.highlight3": "Conectando comunidades en todo el mundo a través de narrativas compartidas",
+    "donate.thankyou": "Gracias por creer en el poder de las historias y por estar con nosotras en este movimiento. Juntas, tejemos un archivo global de memoria, resistencia y esperanza.",
+    "donate.formTitle": "Haz una Donación",
+    "donate.formDesc": "Tu donación se procesa de forma segura a través de Zeffy — una plataforma 100% gratuita para organizaciones sin fines de lucro. No se deducen comisiones de tu contribución.",
+    "donate.formBtn": "Donar vía Zeffy",
+    "donate.zeffy": "Impulsado por Zeffy — 100% gratuito, sin comisiones"
   }
 };
 
