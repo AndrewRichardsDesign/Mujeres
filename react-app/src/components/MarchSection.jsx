@@ -422,34 +422,61 @@ export default function MarchSection({ isActive }) {
           {detailLocation === 'quito' && (
             <div className="march-tab-panel active">
               <div className="march-photo-gallery">
-                {/* Row 1: large left + 2x2 grid right */}
-                <div className="gallery-row gallery-row-1-2">
-                  <div className="gallery-item gallery-large">
-                    <div className="march-gallery-placeholder" />
+                {/* Row 1 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (1).jpeg" alt="Quito march 1" />
                   </div>
-                  <div className="gallery-stack">
-                    <div className="gallery-row" style={{ gap: '12px' }}>
-                      <div className="gallery-item">
-                        <div className="march-gallery-placeholder" />
-                      </div>
-                      <div className="gallery-item">
-                        <div className="march-gallery-placeholder" />
-                      </div>
-                    </div>
-                    <div className="gallery-row" style={{ gap: '12px' }}>
-                      <div className="gallery-item">
-                        <div className="march-gallery-placeholder" />
-                      </div>
-                      <div className="gallery-item">
-                        <div className="march-gallery-placeholder" />
-                      </div>
-                    </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (2).jpeg" alt="Quito march 2" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (3).jpeg" alt="Quito march 3" />
                   </div>
                 </div>
-                {/* Row 2: single item left */}
-                <div className="gallery-row">
-                  <div className="gallery-item" style={{ flex: '0 0 calc(33.33% - 4px)' }}>
-                    <div className="march-gallery-placeholder" />
+                {/* Row 2 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (4).jpeg" alt="Quito march 4" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (5).jpeg" alt="Quito march 5" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (6).jpeg" alt="Quito march 6" />
+                  </div>
+                </div>
+                {/* Row 3 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (7).jpeg" alt="Quito march 7" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (8).jpeg" alt="Quito march 8" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (9).jpeg" alt="Quito march 9" />
+                  </div>
+                </div>
+                {/* Row 4 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (10).jpeg" alt="Quito march 10" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (12).jpeg" alt="Quito march 12" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (15).jpeg" alt="Quito march 15" />
+                  </div>
+                </div>
+                {/* Row 5 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM.jpeg" alt="Quito march" />
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" src="/images/quito/WhatsApp Video 2026-03-15 at 8.35.27 PM.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
