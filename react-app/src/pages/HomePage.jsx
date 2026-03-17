@@ -59,7 +59,7 @@ export default function HomePage() {
   const activists = [
     { id: 1, name: 'Andrea - Ecuador', photo: '/images/AndreaCollab.jpg' },
     { id: 2, name: 'Caro - Germany', photo: '/images/Caro.jpg' },
-    { id: 3, name: 'Andrew - United States', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 3, name: 'Andrew - United States', photo: '/images/PXL_20240706_195019804 (1).jpg' },
     { id: 4, name: 'Ana Gabriela Gutiérrez Martínez - México', photo: '/images/ANA Gabriela.jpeg' },
     { id: 5, name: 'Monica Castillo - Ecuador', photo: '/images/MONICA.jpeg' },
   ];
