@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import Navigation from '../components/Navigation';
@@ -63,6 +63,24 @@ export default function HomePage() {
     { id: 4, name: 'Ana Gabriela Gutiérrez Martínez - México', photo: '/images/ANA Gabriela.jpeg' },
     { id: 5, name: 'Monica Castillo - Ecuador', photo: '/images/MONICA.jpeg' },
   ];
+
+  const descriptionRefs = useRef({});
+  const [truncatedIds, setTruncatedIds] = useState(new Set());
+
+  useEffect(() => {
+    const checkTruncation = () => {
+      const newTruncated = new Set();
+      Object.entries(descriptionRefs.current).forEach(([id, el]) => {
+        if (el && el.scrollHeight > el.clientHeight) {
+          newTruncated.add(Number(id));
+        }
+      });
+      setTruncatedIds(newTruncated);
+    };
+    checkTruncation();
+    window.addEventListener('resize', checkTruncation);
+    return () => window.removeEventListener('resize', checkTruncation);
+  }, [lang]);
 
   return (
     <>
@@ -139,10 +157,12 @@ export default function HomePage() {
                     <img className="gallery-img" src={photo} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <h4 className="activist-name">{name}</h4>
-                  <p className="collaborator-description">{t(`activists.bio${id}`)}</p>
-                  <button className="collaborator-read-more" onClick={() => setBioModalOpen(id)}>
-                    {t('collaborators.readMore')}
-                  </button>
+                  <p className="collaborator-description" ref={(el) => (descriptionRefs.current[id] = el)}>{t(`activists.bio${id}`)}</p>
+                  {truncatedIds.has(id) && (
+                    <button className="collaborator-read-more" onClick={() => setBioModalOpen(id)}>
+                      {t('collaborators.readMore')}
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
