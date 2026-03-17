@@ -256,9 +256,6 @@ export default function MarchSection({ isActive }) {
                       <img className="gallery-img" src="/images/before-paper1.jpg" alt="Before the march 1" />
                     </div>
                     <div className="gallery-item">
-                      <img className="gallery-img" src="/images/before-paper2.jpg" alt="Before the march 2" />
-                    </div>
-                    <div className="gallery-item">
                       <img className="gallery-img" src="/images/before-paper3.jpg" alt="Before the march 3" />
                     </div>
                   </div>
@@ -284,10 +281,13 @@ export default function MarchSection({ isActive }) {
                   ))}
                 </div>
                 <div className="march-photo-gallery">
-                  {/* Row 1: two equal */}
+                  {/* Row 1: three items */}
                   <div className="gallery-row gallery-row-3">
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/Cape.jpg" alt="Woman wearing feminist cape during the march" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/before-paper2.jpg" alt="Justicia para Karla" />
                     </div>
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/gallery-14.jpg" alt="During the march 14" />
