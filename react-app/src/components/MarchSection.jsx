@@ -67,6 +67,10 @@ export default function MarchSection({ isActive }) {
   };
 
   const years = ['2026', '2025', '2024', '2023', '2022', '2021', '2020'];
+  const activeYears = {
+    mexico: ['2026', '2023'],
+    quito: ['2026', '2024'],
+  };
 
   const beforeCards = [
     { img: '/images/march/before-1.png', alt: 'Majo & Mafer', desc: 'march.before.desc1', testimony: 'march.before.testimony1', audioId: 'march-audio-before-1', audioSrc: '/audio/before-1.m4a' },
@@ -109,7 +113,7 @@ export default function MarchSection({ isActive }) {
         <p className="march-instruction">{t('march.instruction')}</p>
         <div className="march-year-selector">
           <select className="year-dropdown" value={year} onChange={(e) => setYear(e.target.value)}>
-            {years.map((y) => <option key={y} value={y}>{y}</option>)}
+            {[...new Set([...activeYears.mexico, ...activeYears.quito])].sort((a, b) => b - a).map((y) => <option key={y} value={y}>{y}</option>)}
           </select>
         </div>
         <div className="march-map-container">
@@ -218,7 +222,13 @@ export default function MarchSection({ isActive }) {
               <select
                 className="year-dropdown"
                 value={detailLocation}
-                onChange={(e) => setDetailLocation(e.target.value)}
+                onChange={(e) => {
+                  const newLoc = e.target.value;
+                  setDetailLocation(newLoc);
+                  if (!activeYears[newLoc].includes(detailYear)) {
+                    setDetailYear(activeYears[newLoc][0]);
+                  }
+                }}
               >
                 <option value="mexico">Mexico</option>
                 <option value="quito">Quito</option>
@@ -228,7 +238,7 @@ export default function MarchSection({ isActive }) {
                 value={detailYear}
                 onChange={(e) => setDetailYear(e.target.value)}
               >
-                {years.map((y) => <option key={y} value={y}>{y}</option>)}
+                {activeYears[detailLocation].map((y) => <option key={y} value={y}>{y}</option>)}
               </select>
             </div>
           </div>
