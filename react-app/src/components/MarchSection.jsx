@@ -419,7 +419,7 @@ export default function MarchSection({ isActive }) {
             </>
           )}
 
-          {detailLocation === 'quito' && (
+          {detailLocation === 'quito' && detailYear === '2026' && (
             <div className="march-tab-panel active">
               <div className="march-photo-gallery">
                 {/* Row 1 */}
@@ -477,6 +477,73 @@ export default function MarchSection({ isActive }) {
                   </div>
                   <div className="gallery-item">
                     <video className="gallery-img" src="/images/quito/WhatsApp Video 2026-03-15 at 8.35.27 PM.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {detailLocation === 'quito' && detailYear === '2024' && (
+            <div className="march-tab-panel active">
+              <div className="march-photo-gallery">
+                {/* Row 1 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-45-12 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-45-53 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-06.jpg" alt="Quito 2024 march" />
+                  </div>
+                </div>
+                {/* Row 2 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-18 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-21 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-31.jpg" alt="Quito 2024 march" />
+                  </div>
+                </div>
+                {/* Row 3 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-20 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-28 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-29 3.jpg" alt="Quito 2024 march" />
+                  </div>
+                </div>
+                {/* Row 4 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-29 4.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-38 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-27-56 2.jpg" alt="Quito 2024 march" />
+                  </div>
+                </div>
+                {/* Row 5: videos */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-18-17-53.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-28 2.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-38 2.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
