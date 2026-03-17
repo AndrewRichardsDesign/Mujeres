@@ -746,14 +746,42 @@ body {
     min-height: 280px;
 }
 /* After Tab Layout */
-.after-content {
-    max-width: 720px;
+.after-split {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+.after-split-image {
+    flex: 0 0 66.666%;
+    max-width: 66.666%;
+}
+.after-split-image .gallery-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+.after-split-text {
+    flex: 0 0 calc(33.333% - 24px);
+    max-width: calc(33.333% - 24px);
 }
 .after-description {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.7;
     color: #4b5563;
-    margin: 24px 0 0;
+    margin: 0 0 16px;
+}
+.after-description:first-child {
+    margin-top: 0;
+}
+@media (max-width: 768px) {
+    .after-split {
+        flex-direction: column;
+    }
+    .after-split-image,
+    .after-split-text {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 /* ============================================
    Activists Section
