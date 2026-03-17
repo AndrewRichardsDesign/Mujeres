@@ -201,7 +201,7 @@ export default function MarchSection({ isActive }) {
             <button className="march-back-btn" onClick={hideDetail}>
               {t('march.back')}
             </button>
-            {detailLocation === 'mexico' && (
+            {detailLocation === 'mexico' && detailYear !== '2023' && (
               <div className="march-detail-tabs">
                 {['before', 'during', 'after'].map((tab) => (
                   <button
@@ -233,7 +233,7 @@ export default function MarchSection({ isActive }) {
             </div>
           </div>
 
-          {detailLocation === 'mexico' && (
+          {detailLocation === 'mexico' && detailYear !== '2023' && (
             <>
               {/* Before Tab */}
               <div className={`march-tab-panel${detailTab === 'before' ? ' active' : ''}`}>
@@ -419,6 +419,111 @@ export default function MarchSection({ isActive }) {
             </>
           )}
 
+          {detailLocation === 'mexico' && detailYear === '2023' && (
+            <div className="march-tab-panel active">
+              <div className="march-photo-gallery">
+                {/* Row 1 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_2967.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_2971.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_3589.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                </div>
+                {/* Row 2 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_3591.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_3631.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_3651.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                </div>
+                {/* Row 3 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_3683.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_3686.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6011.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                </div>
+                {/* Row 4: video */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6013.MOV" type="video/quicktime" />
+                    </video>
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6015.MOV" type="video/quicktime" />
+                    </video>
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6016.MOV" type="video/quicktime" />
+                    </video>
+                  </div>
+                </div>
+                {/* Row 5: video */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6017.MOV" type="video/quicktime" />
+                    </video>
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6019.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6021.MOV" type="video/quicktime" />
+                    </video>
+                  </div>
+                </div>
+                {/* Row 6 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6022.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6023.MOV" type="video/quicktime" />
+                    </video>
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6025.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                </div>
+                {/* Row 7 */}
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6026.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6029.HEIC" alt="Mexico City 2023 march" />
+                  </div>
+                  <div className="gallery-item">
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/vidtest1.mov" type="video/quicktime" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {detailLocation === 'quito' && detailYear === '2026' && (
             <div className="march-tab-panel active">
               <div className="march-photo-gallery">
@@ -476,7 +581,7 @@ export default function MarchSection({ isActive }) {
                     <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM.jpeg" alt="Quito march" />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito/WhatsApp Video 2026-03-15 at 8.35.27 PM.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito/WhatsApp Video 2026-03-15 at 8.35.27 PM.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
@@ -537,13 +642,13 @@ export default function MarchSection({ isActive }) {
                 {/* Row 5: videos */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-18-17-53.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-18-17-53.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-28 2.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-28 2.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-38 2.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-38 2.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
