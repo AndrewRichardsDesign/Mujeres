@@ -69,19 +69,19 @@ export default function MarchSection({ isActive }) {
   const years = ['2026', '2025', '2024', '2023', '2022', '2021', '2020'];
 
   const beforeCards = [
-    { img: '/images/march/before-1.jpg', alt: 'Majo & Mafer', desc: 'march.before.desc1', testimony: 'march.before.testimony1', audioId: 'march-audio-before-1', audioSrc: '/audio/before-1.m4a' },
-    { img: '/images/march/before-2.jpg', alt: 'Helen & Caridad', desc: 'march.before.desc2', testimony: 'march.before.testimony2', audioId: 'march-audio-before-2', audioSrc: '/audio/before-2.m4a' },
+    { img: '/images/march/before-1.png', alt: 'Majo & Mafer', desc: 'march.before.desc1', testimony: 'march.before.testimony1', audioId: 'march-audio-before-1', audioSrc: '/audio/before-1.m4a' },
+    { img: '/images/march/before-2.png', alt: 'Helen & Caridad', desc: 'march.before.desc2', testimony: 'march.before.testimony2', audioId: 'march-audio-before-2', audioSrc: '/audio/before-2.m4a' },
   ];
 
   const duringCards = [
-    { img: '/images/march/1.jpg', alt: 'Jannai', desc: 'march.during.desc1', testimony: 'march.during.testimony1', audioId: 'march-audio-1', audioSrc: '/audio/1.m4a' },
-    { img: '/images/march/2.jpg', alt: 'Collectivo Gordofobia', desc: 'march.during.desc2', testimony: 'march.during.testimony2', audioId: 'march-audio-2', audioSrc: '/audio/2.m4a' },
-    { img: '/images/march/3.jpg', alt: 'Angeles', desc: 'march.during.desc3', testimony: 'march.during.testimony3', audioId: 'march-audio-3', audioSrc: '/audio/3.m4a', audioId2: 'march-audio-3-1', audioSrc2: '/audio/3.1.m4a' },
+    { img: '/images/march/1.png', alt: 'Jannai', desc: 'march.during.desc1', testimony: 'march.during.testimony1', audioId: 'march-audio-1', audioSrc: '/audio/1.m4a' },
+    { img: '/images/march/2.png', alt: 'Collectivo Gordofobia', desc: 'march.during.desc2', testimony: 'march.during.testimony2', audioId: 'march-audio-2', audioSrc: '/audio/2.m4a' },
+    { img: '/images/march/3.png', alt: 'Angeles', desc: 'march.during.desc3', testimony: 'march.during.testimony3', audioId: 'march-audio-3', audioSrc: '/audio/3.m4a', audioId2: 'march-audio-3-1', audioSrc2: '/audio/3.1.m4a' },
     { img: '/images/march/4.jpg', alt: 'Valeria & Pamela', desc: 'march.during.desc4', testimony: 'march.during.testimony4', audioId: 'march-audio-4', audioSrc: '/audio/4.m4a' },
     { img: '/images/march/5.jpg', alt: 'Brenda', desc: 'march.during.desc5', testimony: 'march.during.testimony5', audioId: 'march-audio-5', audioSrc: '/audio/5.m4a' },
     { img: '/images/march/6.jpg', alt: 'Kimberly, Carolina, and Melissa', desc: 'march.during.desc6', testimony: 'march.during.testimony6', audioId: 'march-audio-6', audioSrc: '/audio/6.m4a' },
 
-    { img: '/images/march/8.jpg', alt: 'Esotérica', desc: 'march.during.desc8', testimony: 'march.during.testimony8', audioId: 'march-audio-8', audioSrc: '/audio/8.m4a' },
+    { img: '/images/march/8.png', alt: 'Esotérica', desc: 'march.during.desc8', testimony: 'march.during.testimony8', audioId: 'march-audio-8', audioSrc: '/audio/8.m4a' },
     {
       alt: 'Monserrat', desc: 'march.during.desc9', testimony: 'march.during.testimony9', audioId: 'march-audio-9', audioSrc: '/audio/9.m4a',
       carouselMedia: [
@@ -96,6 +96,7 @@ export default function MarchSection({ isActive }) {
     { img: '/images/march/13.jpg', alt: 'Cinthia', desc: 'march.during.desc13', testimony: 'march.during.testimony13', audioId: 'march-audio-13', audioSrc: '/audio/13.m4a' },
     { img: '/images/march/14.jpg', alt: 'Ana', desc: 'march.during.desc14', testimony: 'march.during.testimony14', audioId: 'march-audio-14', audioSrc: '/audio/14.m4a' },
     { img: '/images/march/15.jpg', alt: 'Verónica', desc: 'march.during.desc15', testimony: 'march.during.testimony15', audioId: 'march-audio-15', audioSrc: '/audio/15.m4a' },
+    { img: '/images/march/16.jpeg', alt: 'Karen, Mafer y Mariel', desc: 'march.during.desc16', testimony: 'march.during.testimony16', audioId: 'march-audio-16', audioSrc: '/audio/16.mp4' },
   ];
 
   return (
@@ -255,10 +256,37 @@ export default function MarchSection({ isActive }) {
                       <img className="gallery-img" src="/images/before-paper1.jpg" alt="Before the march 1" />
                     </div>
                     <div className="gallery-item">
-                      <img className="gallery-img" src="/images/before-paper2.jpg" alt="Before the march 2" />
+                      <img className="gallery-img" src="/images/New_Paper2.jpg" alt="Before the march - paper 2" />
                     </div>
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/before-paper3.jpg" alt="Before the march 3" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group1.jpeg" alt="Before the march - group 1" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group2.jpeg" alt="Before the march - group 2" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group3.jpeg" alt="Before the march - group 3" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group4.jpeg" alt="Before the march - group 4" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group5.jpeg" alt="Before the march - group 5" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group6.jpeg" alt="Before the march - group 6" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group7.jpeg" alt="Before the march - group 7" />
                     </div>
                   </div>
                 </div>
@@ -283,10 +311,13 @@ export default function MarchSection({ isActive }) {
                   ))}
                 </div>
                 <div className="march-photo-gallery">
-                  {/* Row 1: two equal */}
+                  {/* Row 1: three items */}
                   <div className="gallery-row gallery-row-3">
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/Cape.jpg" alt="Woman wearing feminist cape during the march" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/before-paper2.jpg" alt="Justicia para Karla" />
                     </div>
                     <div className="gallery-item">
                       <img className="gallery-img" src="/images/gallery-14.jpg" alt="During the march 14" />
