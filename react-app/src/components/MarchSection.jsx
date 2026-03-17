@@ -395,6 +395,27 @@ export default function MarchSection({ isActive }) {
                     <p className="after-description">Las imágenes publicadas muestran la fuerza simbólica y emocional de la jornada, con calles teñidas de morado y miles de participantes exigiendo justicia, seguridad y respeto a sus derechos. La nota sitúa la protesta dentro de un contexto nacional e internacional de creciente exigencia social frente a la violencia de género.</p>
                   </div>
                 </div>
+                <div className="march-photo-gallery" style={{ marginTop: '24px' }}>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Newspaper1 1.png" alt="Newspaper coverage 1" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Newspaper2 1.png" alt="Newspaper coverage 2" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Newspaper3 1.png" alt="Newspaper coverage 3" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Instagram1.jpg" alt="Instagram post 1" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Instagram2.jpg" alt="Instagram post 2" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </>
           )}
