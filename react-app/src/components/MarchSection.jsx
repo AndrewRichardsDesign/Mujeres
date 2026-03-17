@@ -12,6 +12,7 @@ export default function MarchSection({ isActive }) {
   const [detailLocation, setDetailLocation] = useState('mexico');
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
+  const markersRef = useRef({ mexico: null, quito: null });
 
   useEffect(() => {
     if (!isActive || mapInstanceRef.current || !mapRef.current) return;
@@ -39,6 +40,7 @@ export default function MarchSection({ isActive }) {
       const markerQuito = L.marker([-0.1807, -78.4678]).addTo(map);
       markerQuito.on('click', () => setPinModalOpen('quito'));
 
+      markersRef.current = { mexico: markerMexico, quito: markerQuito };
       mapInstanceRef.current = map;
     }, 150);
 
@@ -51,11 +53,27 @@ export default function MarchSection({ isActive }) {
     }
   }, [isActive, detailView]);
 
+  // Show/hide map markers based on whether location has content for selected year
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    const markers = markersRef.current;
+    if (!map || !markers.mexico || !markers.quito) return;
+
+    Object.entries(markers).forEach(([loc, marker]) => {
+      if (activeYears[loc].includes(year)) {
+        if (!map.hasLayer(marker)) map.addLayer(marker);
+      } else {
+        if (map.hasLayer(marker)) map.removeLayer(marker);
+      }
+    });
+  }, [year]);
+
   const showDetail = (location) => {
     const loc = location || 'mexico';
     setPinModalOpen(null);
     setDetailView(true);
     setDetailLocation(loc);
+    setDetailYear(year);
     if (loc === 'mexico') setDetailTab('before');
   };
 
