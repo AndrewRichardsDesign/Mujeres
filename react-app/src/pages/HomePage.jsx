@@ -19,10 +19,6 @@ function ContactModal({ onClose }) {
             <span className="contact-modal-icon">&#9993;</span>
             <a href="mailto:VocesDel8M@gmail.com">VocesDel8M@gmail.com</a>
           </div>
-          <div className="contact-modal-item">
-            <span className="contact-modal-icon">&#9742;</span>
-            <a href="tel:+19086354081">+1 908-635-4081</a>
-          </div>
         </div>
       </div>
     </div>
