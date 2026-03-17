@@ -1,8 +1,31 @@
+import { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export default function DonatePage() {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js';
+    script.async = true;
+    script.onload = () => {
+      if (window.kofiWidgetOverlay) {
+        window.kofiWidgetOverlay.draw('vocesdel8m', {
+          'type': 'floating-chat',
+          'floating-chat.donateButton.text': t('donate.formBtn'),
+          'floating-chat.donateButton.background-color': '#5150f7',
+          'floating-chat.donateButton.text-color': '#fff',
+        });
+      }
+    };
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+      const frame = document.getElementById('kofi-overlay');
+      if (frame) frame.remove();
+    };
+  }, [t]);
 
   return (
     <>
@@ -31,29 +54,18 @@ export default function DonatePage() {
             <p className="donate-thankyou">{t('donate.thankyou')}</p>
           </div>
           <div className="donate-form">
-            <div className="donate-form-placeholder">
+            <div className="donate-form-card">
               <div className="donate-form-icon">&#128156;</div>
               <h2 className="donate-form-heading">{t('donate.formTitle')}</h2>
               <p className="donate-form-text">{t('donate.formDesc')}</p>
-              <a
-                href="https://www.zeffy.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="donate-zeffy-btn"
-              >
-                {t('donate.formBtn')}
-              </a>
-              <p className="donate-zeffy-note">{t('donate.zeffy')}</p>
-            </div>
-            {/*
-              To embed your Zeffy form, replace the placeholder above with:
               <iframe
-                title="Zeffy Donation Form"
-                src="https://www.zeffy.com/en-US/embed/donation-form/YOUR_FORM_ID"
-                style={{ width: '100%', height: '700px', border: 'none' }}
-                allowpaymentrequest="true"
+                id="kofiframe"
+                src="https://ko-fi.com/vocesdel8m/?hidefeed=true&widget=true&embed=true&preview=true"
+                title="Ko-fi Donation"
+                className="donate-kofi-iframe"
               />
-            */}
+              <p className="donate-kofi-note">{t('donate.kofi')}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -142,9 +142,9 @@ const translations = {
     "donate.highlight3": "Bridging communities worldwide through shared narratives",
     "donate.thankyou": "Thank you for believing in the power of storytelling and standing with us in this movement. Together, we weave a global archive of memory, resistance, and hope.",
     "donate.formTitle": "Make a Donation",
-    "donate.formDesc": "Your donation is processed securely through Zeffy — a 100% free platform for nonprofits. No fees are deducted from your contribution.",
-    "donate.formBtn": "Donate via Zeffy",
-    "donate.zeffy": "Powered by Zeffy — 100% free, zero transaction fees"
+    "donate.formDesc": "Your donation is processed securely through Ko-fi — a free platform with no platform fees. Every contribution goes directly to supporting our work.",
+    "donate.formBtn": "Support Us",
+    "donate.kofi": "Powered by Ko-fi — free to use, no platform fees"
   },
   es: {
     "lang.spanish": "Espa\u00F1ol",
@@ -289,9 +289,9 @@ const translations = {
     "donate.highlight3": "Conectando comunidades en todo el mundo a través de narrativas compartidas",
     "donate.thankyou": "Gracias por creer en el poder de las historias y por estar con nosotras en este movimiento. Juntas, tejemos un archivo global de memoria, resistencia y esperanza.",
     "donate.formTitle": "Haz una Donación",
-    "donate.formDesc": "Tu donación se procesa de forma segura a través de Zeffy — una plataforma 100% gratuita para organizaciones sin fines de lucro. No se deducen comisiones de tu contribución.",
-    "donate.formBtn": "Donar vía Zeffy",
-    "donate.zeffy": "Impulsado por Zeffy — 100% gratuito, sin comisiones"
+    "donate.formDesc": "Tu donación se procesa de forma segura a través de Ko-fi — una plataforma gratuita sin comisiones de plataforma. Cada contribución va directamente a apoyar nuestro trabajo.",
+    "donate.formBtn": "Apóyanos",
+    "donate.kofi": "Impulsado por Ko-fi — gratuito, sin comisiones de plataforma"
   }
 };
 
