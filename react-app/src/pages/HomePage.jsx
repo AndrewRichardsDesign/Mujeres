@@ -30,7 +30,7 @@ function ContactModal({ onClose }) {
 }
 
 export default function HomePage() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const [activeSection, setActiveSection] = useState('participate');
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [activistsTab, setActivistsTab] = useState('activists');
