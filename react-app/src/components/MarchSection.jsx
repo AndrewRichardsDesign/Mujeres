@@ -484,58 +484,58 @@ export default function MarchSection({ isActive }) {
                 {/* Row 1 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (1).jpeg" alt="Quito march 1" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-1.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (2).jpeg" alt="Quito march 2" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-2.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (3).jpeg" alt="Quito march 3" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-3.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 2 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (4).jpeg" alt="Quito march 4" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-4.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (5).jpeg" alt="Quito march 5" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-5.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (6).jpeg" alt="Quito march 6" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-6.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 3 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (7).jpeg" alt="Quito march 7" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-7.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (8).jpeg" alt="Quito march 8" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-8.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (9).jpeg" alt="Quito march 9" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-9.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 4 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (10).jpeg" alt="Quito march 10" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-10.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (12).jpeg" alt="Quito march 12" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-12.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (15).jpeg" alt="Quito march 15" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-15.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 5 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM.jpeg" alt="Quito march" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-0.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito/WhatsApp Video 2026-03-15 at 8.35.27 PM.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito/quito-2026-video.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
