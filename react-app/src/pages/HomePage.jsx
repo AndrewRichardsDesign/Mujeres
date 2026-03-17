@@ -283,19 +283,6 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <div className="activist-row">
-                  <div className="activist-photo">
-                    <img className="gallery-img" src="/images/artivismo-19.jpg" alt="María Antonio" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  </div>
-                  <div className="activist-info">
-                    <h4 className="activist-name">María Antonio Núñez Díaz</h4>
-                    <p className="activist-bio">{t('activists.bio.maria')}</p>
-                    <div className="activist-links">
-                      <span>Web: <a href="https://www.granom.com.mx" target="_blank" rel="noopener noreferrer">granom.com.mx</a></span>
-                      <span>Instagram: <a href="https://www.instagram.com/granom" target="_blank" rel="noopener noreferrer">@granom</a></span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
