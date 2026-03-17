@@ -88,7 +88,6 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-overlay" />
         <LanguageSwitcher />
         <div className="hero-content">
           <h1>{t('hero.title')}</h1>
