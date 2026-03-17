@@ -425,98 +425,52 @@ export default function MarchSection({ isActive }) {
                 {/* Row 1 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_2967.HEIC" alt="Mexico City 2023 march" />
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6019.jpg" alt="Mexico City 2023 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_2971.HEIC" alt="Mexico City 2023 march" />
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6022.jpg" alt="Mexico City 2023 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_3589.HEIC" alt="Mexico City 2023 march" />
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6025.jpg" alt="Mexico City 2023 march" />
                   </div>
                 </div>
                 {/* Row 2 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_3591.HEIC" alt="Mexico City 2023 march" />
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6026.jpg" alt="Mexico City 2023 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_3631.HEIC" alt="Mexico City 2023 march" />
+                    <img className="gallery-img" src="/images/mexico-2023/IMG_6029.jpg" alt="Mexico City 2023 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_3651.HEIC" alt="Mexico City 2023 march" />
+                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+                      <source src="/videos/mexico-2023/IMG_6016.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
                 {/* Row 3 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_3683.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_3686.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_6011.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                </div>
-                {/* Row 4: video */}
-                <div className="gallery-row gallery-row-3">
-                  <div className="gallery-item">
                     <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/IMG_6013.MOV" type="video/quicktime" />
+                      <source src="/videos/mexico-2023/IMG_6017.mp4" type="video/mp4" />
                     </video>
                   </div>
                   <div className="gallery-item">
                     <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/IMG_6015.MOV" type="video/quicktime" />
+                      <source src="/videos/mexico-2023/IMG_6021.mp4" type="video/mp4" />
                     </video>
                   </div>
                   <div className="gallery-item">
                     <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/IMG_6016.MOV" type="video/quicktime" />
+                      <source src="/videos/mexico-2023/IMG_6023.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
-                {/* Row 5: video */}
+                {/* Row 4 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
                     <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/IMG_6017.MOV" type="video/quicktime" />
-                    </video>
-                  </div>
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_6019.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                  <div className="gallery-item">
-                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/IMG_6021.MOV" type="video/quicktime" />
-                    </video>
-                  </div>
-                </div>
-                {/* Row 6 */}
-                <div className="gallery-row gallery-row-3">
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_6022.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                  <div className="gallery-item">
-                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/IMG_6023.MOV" type="video/quicktime" />
-                    </video>
-                  </div>
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_6025.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                </div>
-                {/* Row 7 */}
-                <div className="gallery-row gallery-row-3">
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_6026.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                  <div className="gallery-item">
-                    <img className="gallery-img" src="/images/mexico-2023/IMG_6029.HEIC" alt="Mexico City 2023 march" />
-                  </div>
-                  <div className="gallery-item">
-                    <video className="gallery-img" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                      <source src="/videos/mexico-2023/vidtest1.mov" type="video/quicktime" />
+                      <source src="/videos/mexico-2023/vidtest1.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
@@ -530,58 +484,58 @@ export default function MarchSection({ isActive }) {
                 {/* Row 1 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (1).jpeg" alt="Quito march 1" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-1.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (2).jpeg" alt="Quito march 2" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-2.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (3).jpeg" alt="Quito march 3" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-3.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 2 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (4).jpeg" alt="Quito march 4" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-4.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (5).jpeg" alt="Quito march 5" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-5.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (6).jpeg" alt="Quito march 6" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-6.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 3 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (7).jpeg" alt="Quito march 7" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-7.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (8).jpeg" alt="Quito march 8" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-8.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (9).jpeg" alt="Quito march 9" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-9.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 4 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (10).jpeg" alt="Quito march 10" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-10.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (12).jpeg" alt="Quito march 12" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-12.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM (15).jpeg" alt="Quito march 15" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-15.jpeg" alt="Quito 2026 march" />
                   </div>
                 </div>
                 {/* Row 5 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito/WhatsApp Image 2026-03-15 at 8.35.27 PM.jpeg" alt="Quito march" />
+                    <img className="gallery-img" src="/images/quito/quito-2026-0.jpeg" alt="Quito 2026 march" />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito/WhatsApp Video 2026-03-15 at 8.35.27 PM.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito/quito-2026-video.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
@@ -594,61 +548,61 @@ export default function MarchSection({ isActive }) {
                 {/* Row 1 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-45-12 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-1.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-45-53 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-2.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-06.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-3.jpg" alt="Quito 2024 march" />
                   </div>
                 </div>
                 {/* Row 2 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-18 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-4.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-21 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-5.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-17-46-31.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-6.jpg" alt="Quito 2024 march" />
                   </div>
                 </div>
                 {/* Row 3 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-20 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-7.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-28 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-8.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-29 3.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-9.jpg" alt="Quito 2024 march" />
                   </div>
                 </div>
                 {/* Row 4 */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-29 4.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-10.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-23-38 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-11.jpg" alt="Quito 2024 march" />
                   </div>
                   <div className="gallery-item">
-                    <img className="gallery-img" src="/images/quito-2024/PHOTO-2024-03-08-19-27-56 2.jpg" alt="Quito 2024 march" />
+                    <img className="gallery-img" src="/images/quito-2024/quito-2024-12.jpg" alt="Quito 2024 march" />
                   </div>
                 </div>
                 {/* Row 5: videos */}
                 <div className="gallery-row gallery-row-3">
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-18-17-53.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito-2024/quito-2024-video-1.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-28 2.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito-2024/quito-2024-video-2.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div className="gallery-item">
-                    <video className="gallery-img" src="/images/quito-2024/VIDEO-2024-03-08-19-23-38 2.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <video className="gallery-img" src="/images/quito-2024/quito-2024-video-3.mp4" controls playsInline preload="metadata" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 </div>
               </div>
