@@ -53,11 +53,11 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, name: 'Andrea - Ecuador', photo: '/images/AndreaCollab.jpg' },
-    { id: 2, name: 'Caro - Germany', photo: '/images/Caro.jpg' },
-    { id: 3, name: 'Andrew - United States', photo: '/images/PXL_20240706_195019804 (1).jpg' },
-    { id: 4, name: 'Ana Gabriela - México', photo: '/images/ANA Gabriela.jpeg' },
-    { id: 5, name: 'Monica - Ecuador', photo: '/images/MONICA.jpeg' },
+    { id: 1, name: 'Andrea - Ecuador', photo: '/images/Collab_Andrea.png' },
+    { id: 2, name: 'Caro - Germany', photo: '/images/Collab_Caro.png' },
+    { id: 3, name: 'Andrew - United States', photo: '/images/Collab_Andrew.png' },
+    { id: 4, name: 'Ana Gabriela - México', photo: '/images/Collab_Ana.png' },
+    { id: 5, name: 'Monica - Ecuador', photo: '/images/Collab_Monica.png' },
   ];
 
   const descriptionRefs = useRef({});
