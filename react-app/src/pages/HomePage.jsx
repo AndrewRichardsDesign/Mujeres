@@ -65,21 +65,50 @@ export default function HomePage() {
   ];
 
   const descriptionRefs = useRef({});
+  const gridRef = useRef(null);
   const [truncatedIds, setTruncatedIds] = useState(new Set());
 
   useEffect(() => {
-    const checkTruncation = () => {
+    const measure = () => {
+      // Temporarily remove max-height so we can measure natural heights
+      const els = descriptionRefs.current;
+      Object.values(els).forEach((el) => {
+        if (el) el.style.maxHeight = 'none';
+      });
+
+      // Find the max natural height among the reference cards (IDs 1-3)
+      const referenceIds = [1, 2, 3];
+      let maxH = 0;
+      referenceIds.forEach((id) => {
+        const el = els[id];
+        if (el) {
+          maxH = Math.max(maxH, el.scrollHeight);
+        }
+      });
+
+      if (maxH === 0) return;
+
+      // Apply the max height and detect which cards overflow
       const newTruncated = new Set();
-      Object.entries(descriptionRefs.current).forEach(([id, el]) => {
-        if (el && el.scrollHeight > el.clientHeight) {
+      Object.entries(els).forEach(([id, el]) => {
+        if (!el) return;
+        const natural = el.scrollHeight;
+        el.style.maxHeight = `${maxH}px`;
+        if (natural > maxH) {
           newTruncated.add(Number(id));
         }
       });
+
       setTruncatedIds(newTruncated);
     };
-    checkTruncation();
-    window.addEventListener('resize', checkTruncation);
-    return () => window.removeEventListener('resize', checkTruncation);
+
+    // Delay to allow images to load and layout to settle
+    const timer = setTimeout(measure, 100);
+    window.addEventListener('resize', measure);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', measure);
+    };
   }, [lang]);
 
   return (
