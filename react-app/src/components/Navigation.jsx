@@ -1,6 +1,6 @@
 import { useLanguage } from '../i18n/LanguageContext';
 
-export default function Navigation({ activeSection, onNavigate, isMarching }) {
+export default function Navigation({ activeSection, onNavigate, isMarching, isDonating }) {
   const { t } = useLanguage();
 
   const links = [
@@ -25,6 +25,26 @@ export default function Navigation({ activeSection, onNavigate, isMarching }) {
             </a>
           ))}
         </div>
+        <a href="/donate" className="donate-btn">{t('nav.donate')}</a>
+      </nav>
+    );
+  }
+
+  if (isDonating) {
+    return (
+      <nav className="main-nav">
+        <div className="nav-inner">
+          {links.map((link) => (
+            <a
+              key={link.id}
+              href={`/#${link.id}`}
+              className="nav-link"
+            >
+              {t(link.key)}
+            </a>
+          ))}
+        </div>
+        <a href="/donate" className="donate-btn active">{t('nav.donate')}</a>
       </nav>
     );
   }
@@ -46,6 +66,7 @@ export default function Navigation({ activeSection, onNavigate, isMarching }) {
           </a>
         ))}
       </div>
+      <a href="/donate" className="donate-btn">{t('nav.donate')}</a>
     </nav>
   );
 }

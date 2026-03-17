@@ -19,10 +19,6 @@ function ContactModal({ onClose }) {
             <span className="contact-modal-icon">&#9993;</span>
             <a href="mailto:VocesDel8M@gmail.com">VocesDel8M@gmail.com</a>
           </div>
-          <div className="contact-modal-item">
-            <span className="contact-modal-icon">&#9742;</span>
-            <a href="tel:+19086354081">+1 908-635-4081</a>
-          </div>
         </div>
       </div>
     </div>
@@ -57,11 +53,11 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, name: 'Andrea - Ecuador', photo: '/images/AndreaCollab.jpg' },
-    { id: 2, name: 'Caro - Germany', photo: '/images/Caro.jpg' },
-    { id: 3, name: 'Andrew - United States', photo: '/images/PXL_20240706_195019804 (1).jpg' },
-    { id: 4, name: 'Ana Gabriela Gutiérrez Martínez - México', photo: '/images/ANA Gabriela.jpeg' },
-    { id: 5, name: 'Monica Castillo - Ecuador', photo: '/images/MONICA.jpeg' },
+    { id: 1, name: 'Andrea - Ecuador', photo: '/images/Collab_Andrea.png' },
+    { id: 2, name: 'Caro - Germany', photo: '/images/Collab_Caro.png' },
+    { id: 3, name: 'Andrew - United States', photo: '/images/Collab_Andrew.png' },
+    { id: 4, name: 'Ana Gabriela - México', photo: '/images/Collab_Ana.png' },
+    { id: 5, name: 'Monica - Ecuador', photo: '/images/Collab_Monica.png' },
   ];
 
   const descriptionRefs = useRef({});

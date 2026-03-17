@@ -217,7 +217,7 @@ export default function MarchSection({ isActive }) {
       {detailView && (
         <div id="march-detail-view">
           <h3 className="march-location-title">
-            {detailLocation === 'mexico' ? 'Mexico' : 'Quito'} {detailYear}
+            {detailLocation === 'mexico' ? 'Mexico City' : 'Quito'} {detailYear}
           </h3>
           <div className="march-detail-header">
             <button className="march-back-btn" onClick={hideDetail}>
@@ -248,7 +248,7 @@ export default function MarchSection({ isActive }) {
                   }
                 }}
               >
-                <option value="mexico">Mexico</option>
+                <option value="mexico">Mexico City</option>
                 <option value="quito">Quito</option>
               </select>
               <select
