@@ -301,6 +301,54 @@ export default function MarchSection({ isActive }) {
                       <img className="gallery-img" src="/images/gallery-18.jpg" alt="During the march 18" />
                     </div>
                   </div>
+                  {/* Row 3 */}
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery1.jpg" alt="During the march gallery 1" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery2.jpg" alt="During the march gallery 2" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery3.jpg" alt="During the march gallery 3" />
+                    </div>
+                  </div>
+                  {/* Row 4 */}
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery4.jpg" alt="During the march gallery 4" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery5.jpg" alt="During the march gallery 5" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery6.jpg" alt="During the march gallery 6" />
+                    </div>
+                  </div>
+                  {/* Row 5 */}
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery7.jpg" alt="During the march gallery 7" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery8.jpeg" alt="During the march gallery 8" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery9.jpeg" alt="During the march gallery 9" />
+                    </div>
+                  </div>
+                  {/* Row 6 */}
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery10.jpeg" alt="During the march gallery 10" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery11.jpeg" alt="During the march gallery 11" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/Add_Gallery12.jpeg" alt="During the march gallery 12" />
+                    </div>
+                  </div>
                 </div>
               </div>
 

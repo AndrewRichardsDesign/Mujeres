@@ -34,6 +34,7 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = useState('participate');
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [activistsTab, setActivistsTab] = useState('activists');
+  const [bioModalOpen, setBioModalOpen] = useState(null);
 
   const navigate = useCallback((id) => {
     setActiveSection(id);
@@ -56,9 +57,11 @@ export default function HomePage() {
   }, []);
 
   const activists = [
-    { id: 1, name: 'Andrea', photo: '/images/AndreaCollab.jpg' },
-    { id: 2, name: 'Caro', photo: '/images/Caro.jpg' },
-    { id: 3, name: 'Andrew', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 1, name: 'Andrea - Ecuador', photo: '/images/AndreaCollab.jpg' },
+    { id: 2, name: 'Caro - Germany', photo: '/images/Caro.jpg' },
+    { id: 3, name: 'Andrew - United States', photo: '/images/Andrea & Andrew.jpg' },
+    { id: 4, name: 'Ana Gabriela Gutiérrez Martínez - México', photo: '/images/ANA Gabriela.jpeg' },
+    { id: 5, name: 'Monica Castillo - Ecuador', photo: '/images/MONICA.jpeg' },
   ];
 
   return (
@@ -137,9 +140,26 @@ export default function HomePage() {
                   </div>
                   <h4 className="activist-name">{name}</h4>
                   <p className="collaborator-description">{t(`activists.bio${id}`)}</p>
+                  <button className="collaborator-read-more" onClick={() => setBioModalOpen(id)}>
+                    {t('collaborators.readMore')}
+                  </button>
                 </div>
               ))}
             </div>
+            {bioModalOpen !== null && (
+              <div className="bio-modal">
+                <div className="bio-modal-overlay" onClick={() => setBioModalOpen(null)} />
+                <div className="bio-modal-content">
+                  <button className="contact-modal-close" onClick={() => setBioModalOpen(null)}>&times;</button>
+                  <h3 className="bio-modal-title">
+                    {activists.find(a => a.id === bioModalOpen)?.name}
+                  </h3>
+                  <div className="bio-modal-body">
+                    {t(`activists.bio${bioModalOpen}`)}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
@@ -158,12 +178,30 @@ export default function HomePage() {
         >
           <div className="content-container content-container--wide">
             <h2 className="section-title">{t('sheets.title')}</h2>
-            <p className="section-body" style={{ maxWidth: '75%', margin: '0 auto 32px' }}>{t('sheets.description')}</p>
+            <p className="section-body" style={{ maxWidth: '75%', margin: '0 auto 16px' }}>{t('sheets.description.p1')}</p>
+            <p className="section-body" style={{ maxWidth: '75%', margin: '0 auto 32px' }}>{t('sheets.description.p2')}</p>
             <div className="march-photo-gallery">
               <div className="gallery-row gallery-row-full">
                 <div className="gallery-item">
                   <img className="gallery-img" src="/images/cobija.jpg" alt="La Cobija" />
                 </div>
+              </div>
+              <div className="cobija-gallery">
+                {[
+                  { src: '/images/LC1.jpg', alt: 'La Cobija 1' },
+                  { src: '/images/LC2.jpg', alt: 'La Cobija 2' },
+                  { src: '/images/LC3.jpg', alt: 'La Cobija 3' },
+                  { src: '/images/LC4.jpeg', alt: 'La Cobija 4' },
+                  { src: '/images/LC5.jpg', alt: 'La Cobija 5' },
+                  { src: '/images/LC6.jpeg', alt: 'La Cobija 6' },
+                  { src: '/images/LC7.jpeg', alt: 'La Cobija 7' },
+                  { src: '/images/LC8.jpeg', alt: 'La Cobija 8' },
+                  { src: '/images/LC9.jpeg', alt: 'La Cobija 9' },
+                ].map((img, i) => (
+                  <div className="cobija-gallery-item" key={i}>
+                    <img className="gallery-img" src={img.src} alt={img.alt} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
