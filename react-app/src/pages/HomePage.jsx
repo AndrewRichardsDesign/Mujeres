@@ -88,6 +88,9 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="hero">
+        <video className="hero-video" autoPlay muted loop playsInline>
+          <source src="/images/grok-video-1e2bd496-1098-4bee-981c-6391dd22920c.mp4" type="video/mp4" />
+        </video>
         <LanguageSwitcher />
         <div className="hero-content">
           <h1>{t('hero.title')}</h1>

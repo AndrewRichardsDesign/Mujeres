@@ -28,10 +28,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('/images/grok-image-78d707df-a40d-43a1-af98-e9b3f8d82979.png') center/cover no-repeat;
+    background: #000;
     overflow: hidden;
     padding: 60px 40px 0;
     text-align: center;
+}
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 .hero-content {
     position: relative;
