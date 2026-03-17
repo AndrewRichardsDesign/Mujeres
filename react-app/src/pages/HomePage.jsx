@@ -79,12 +79,14 @@ export default function HomePage() {
     };
 
     const timer = setTimeout(detect, 100);
+    const timer2 = setTimeout(detect, 500);
     window.addEventListener('resize', detect);
     return () => {
       clearTimeout(timer);
+      clearTimeout(timer2);
       window.removeEventListener('resize', detect);
     };
-  }, [lang]);
+  }, [lang, activeSection]);
 
   return (
     <>
