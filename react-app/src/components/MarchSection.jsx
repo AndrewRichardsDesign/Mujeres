@@ -396,22 +396,24 @@ export default function MarchSection({ isActive }) {
                   </div>
                 </div>
                 <div className="march-photo-gallery" style={{ marginTop: '24px' }}>
-                  <div className="gallery-row gallery-row-3">
-                    <div className="gallery-item">
+                  <div className="gallery-row" style={{ gap: '12px' }}>
+                    <div className="gallery-item" style={{ flex: '0 0 calc(50% - 6px)' }}>
                       <img className="gallery-img" src="/images/Newspaper1 1.png" alt="Newspaper coverage 1" />
                     </div>
-                    <div className="gallery-item">
+                    <div className="gallery-item" style={{ flex: '0 0 calc(50% - 6px)' }}>
                       <img className="gallery-img" src="/images/Newspaper2 1.png" alt="Newspaper coverage 2" />
                     </div>
-                    <div className="gallery-item">
+                  </div>
+                  <div className="gallery-row" style={{ gap: '12px' }}>
+                    <div className="gallery-item" style={{ flex: '0 0 calc(50% - 6px)' }}>
                       <img className="gallery-img" src="/images/Newspaper3 1.png" alt="Newspaper coverage 3" />
                     </div>
                   </div>
-                  <div className="gallery-row gallery-row-3">
-                    <div className="gallery-item">
+                  <div className="gallery-row" style={{ gap: '12px' }}>
+                    <div className="gallery-item" style={{ flex: '0 0 calc(25% - 9px)' }}>
                       <img className="gallery-img" src="/images/Instagram1.jpg" alt="Instagram post 1" />
                     </div>
-                    <div className="gallery-item">
+                    <div className="gallery-item" style={{ flex: '0 0 calc(25% - 9px)' }}>
                       <img className="gallery-img" src="/images/Instagram2.jpg" alt="Instagram post 2" />
                     </div>
                   </div>
