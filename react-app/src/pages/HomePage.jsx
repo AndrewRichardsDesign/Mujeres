@@ -294,6 +294,19 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+              <div className="march-photo-gallery">
+                <div className="gallery-row gallery-row-3">
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/Poster1.png" alt="Artivismo poster 1" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/Posters2.png" alt="Artivismo poster 2" />
+                  </div>
+                  <div className="gallery-item">
+                    <img className="gallery-img" src="/images/Posters3.png" alt="Artivismo poster 3" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
