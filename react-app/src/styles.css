@@ -343,6 +343,8 @@ body {
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 .collaborator-card:hover {
     transform: translateY(-4px);
@@ -360,18 +362,20 @@ body {
     margin: 0 0 12px 0;
 }
 .collaborator-description {
-    padding: 0 20px 8px;
+    padding: 0 20px 0;
     font-size: 14px;
     color: #4b5563;
     line-height: 1.6;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin: 0;
+    flex: 1;
 }
 .collaborator-read-more {
     display: block;
-    margin: 0 20px 20px;
+    margin: 8px 20px 20px;
     background: none;
     border: none;
     color: #6c63ff;
@@ -379,6 +383,9 @@ body {
     font-weight: 600;
     cursor: pointer;
     padding: 0;
+}
+.collaborator-card:not(:has(.collaborator-read-more)) .collaborator-description {
+    padding-bottom: 20px;
 }
 .collaborator-read-more:hover {
     text-decoration: underline;
