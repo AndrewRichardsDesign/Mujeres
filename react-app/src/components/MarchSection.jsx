@@ -256,7 +256,37 @@ export default function MarchSection({ isActive }) {
                       <img className="gallery-img" src="/images/before-paper1.jpg" alt="Before the march 1" />
                     </div>
                     <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Paper2.jpg" alt="Before the march - paper 2" />
+                    </div>
+                    <div className="gallery-item">
                       <img className="gallery-img" src="/images/before-paper3.jpg" alt="Before the march 3" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group1.jpeg" alt="Before the march - group 1" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group2.jpeg" alt="Before the march - group 2" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group3.jpeg" alt="Before the march - group 3" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group4.jpeg" alt="Before the march - group 4" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group5.jpeg" alt="Before the march - group 5" />
+                    </div>
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group6.jpeg" alt="Before the march - group 6" />
+                    </div>
+                  </div>
+                  <div className="gallery-row gallery-row-3">
+                    <div className="gallery-item">
+                      <img className="gallery-img" src="/images/New_Group7.jpeg" alt="Before the march - group 7" />
                     </div>
                   </div>
                 </div>
