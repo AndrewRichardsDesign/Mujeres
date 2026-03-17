@@ -65,49 +65,24 @@ export default function HomePage() {
   ];
 
   const descriptionRefs = useRef({});
-  const gridRef = useRef(null);
   const [truncatedIds, setTruncatedIds] = useState(new Set());
 
   useEffect(() => {
-    const measure = () => {
-      // Temporarily remove max-height so we can measure natural heights
-      const els = descriptionRefs.current;
-      Object.values(els).forEach((el) => {
-        if (el) el.style.maxHeight = 'none';
-      });
-
-      // Find the max natural height among the reference cards (IDs 1-3)
-      const referenceIds = [1, 2, 3];
-      let maxH = 0;
-      referenceIds.forEach((id) => {
-        const el = els[id];
-        if (el) {
-          maxH = Math.max(maxH, el.scrollHeight);
-        }
-      });
-
-      if (maxH === 0) return;
-
-      // Apply the max height and detect which cards overflow
+    const detect = () => {
       const newTruncated = new Set();
-      Object.entries(els).forEach(([id, el]) => {
-        if (!el) return;
-        const natural = el.scrollHeight;
-        el.style.maxHeight = `${maxH}px`;
-        if (natural > maxH) {
+      Object.entries(descriptionRefs.current).forEach(([id, el]) => {
+        if (el && el.scrollHeight > el.clientHeight) {
           newTruncated.add(Number(id));
         }
       });
-
       setTruncatedIds(newTruncated);
     };
 
-    // Delay to allow images to load and layout to settle
-    const timer = setTimeout(measure, 100);
-    window.addEventListener('resize', measure);
+    const timer = setTimeout(detect, 100);
+    window.addEventListener('resize', detect);
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', measure);
+      window.removeEventListener('resize', detect);
     };
   }, [lang]);
 
@@ -186,12 +161,14 @@ export default function HomePage() {
                     <img className="gallery-img" src={photo} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <h4 className="activist-name">{name}</h4>
-                  <p className="collaborator-description" ref={(el) => (descriptionRefs.current[id] = el)}>{t(`activists.bio${id}`)}</p>
-                  {truncatedIds.has(id) && (
-                    <button className="collaborator-read-more" onClick={() => setBioModalOpen(id)}>
-                      {t('collaborators.readMore')}
-                    </button>
-                  )}
+                  <div className="collaborator-description-wrapper">
+                    <p className="collaborator-description" ref={(el) => (descriptionRefs.current[id] = el)}>{t(`activists.bio${id}`)}</p>
+                    {truncatedIds.has(id) && (
+                      <button className="collaborator-read-more" onClick={() => setBioModalOpen(id)}>
+                        {t('collaborators.readMore')}
+                      </button>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

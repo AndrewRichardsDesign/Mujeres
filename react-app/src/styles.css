@@ -369,11 +369,19 @@ body {
     line-height: 1.6;
     overflow: hidden;
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+.collaborator-description-wrapper {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
 }
 .collaborator-read-more {
     display: block;
-    margin: 8px 20px 20px;
+    margin: 8px 20px 0 20px;
     background: none;
     border: none;
     color: #6c63ff;
@@ -381,9 +389,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     padding: 0;
-}
-.collaborator-card:not(:has(.collaborator-read-more)) .collaborator-description {
-    padding-bottom: 20px;
+    margin-top: auto;
 }
 .collaborator-read-more:hover {
     text-decoration: underline;
